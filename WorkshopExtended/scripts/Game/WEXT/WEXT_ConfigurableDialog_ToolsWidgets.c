@@ -12,6 +12,9 @@ class WEXT_ConfigurableDialog_ToolsWidgets
 	ButtonWidget m_GenerateCliButton;
 	SCR_ModularButtonComponent m_GenerateCliButtonComponent;
 
+	ButtonWidget m_GitHubButton;
+	SCR_ModularButtonComponent m_GitHubButtonComponent;
+
 	bool Init(Widget root)
 	{
 		m_GenerateDsJsonButton = ButtonWidget.Cast(root.FindWidget("DialogBase0.VerticalLayout.Content.ContentSizeConstraints.ContentVerticalLayout.m_GenerateDsJsonButton"));
@@ -19,6 +22,9 @@ class WEXT_ConfigurableDialog_ToolsWidgets
 
 		m_GenerateCliButton = ButtonWidget.Cast(root.FindWidget("DialogBase0.VerticalLayout.Content.ContentSizeConstraints.ContentVerticalLayout.m_GenerateCliButton"));
 		m_GenerateCliButtonComponent = SCR_ModularButtonComponent.Cast(m_GenerateCliButton.FindHandler(SCR_ModularButtonComponent));
+
+		m_GitHubButton = ButtonWidget.Cast(root.FindWidget("DialogBase0.VerticalLayout.Content.ContentSizeConstraints.ContentVerticalLayout.m_GitHubButton"));
+		m_GitHubButtonComponent = SCR_ModularButtonComponent.Cast(m_GitHubButton.FindHandler(SCR_ModularButtonComponent));
 
 		return true;
 	}

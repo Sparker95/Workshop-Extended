@@ -99,7 +99,7 @@ modded class SCR_AddonManager
 		
 		// Lazy detection of case when addons get enabled/disabled
 		// Iterate all addons and invoke event whenever current list of enabled addons is different from prev. list
-		// It's a really bad implementation but it will in main menu
+		// It's a really bad implementation but it's fine in main menu
 		m_fAddonsEnabledTimer += timeSlice;
 		if (m_fAddonsEnabledTimer > 1/30)
 		{

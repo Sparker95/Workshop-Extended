@@ -15,6 +15,7 @@ class WEXT_ToolsDialog : SCR_ConfigurableDialogUi
 		
 		widgets.m_GenerateDsJsonButtonComponent.m_OnClicked.Insert(OnGenerateDsJsonButton);
 		widgets.m_GenerateCliButtonComponent.m_OnClicked.Insert(OnGenerateCliButton);
+		widgets.m_GitHubButtonComponent.m_OnClicked.Insert(OnGitHubButton);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -86,5 +87,11 @@ class WEXT_ToolsDialog : SCR_ConfigurableDialogUi
 		}
 		
 		new WEXT_DialogCopyToClipboard(cli);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	protected void OnGitHubButton()
+	{
+		new WEXT_DialogCopyToClipboard("https://github.com/Sparker95/Workshop-Extended");
 	}
 }

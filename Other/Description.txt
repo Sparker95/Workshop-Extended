@@ -1,0 +1,18 @@
+WARNING
+
+To use the mod you must start the game with parameter:
+-addons WorkshopExtended
+In Steam: Right-mouse click -> Properties -> General -> Launch Options -> type the parameter there.
+That's only way to modify main menu, meaning it's not possible to use this on consoles!
+
+
+About Mod
+
+The mod extends in-game Workshop UI and adds new features:
+- List view with mods. You can easily enable/disable or delete mods.
+- Mod presets.
+- Mod bar which shows enabled mods.
+- Useful utilities: generate JSON for dedicated server, generate -addons CLI parameter based on enabled mods.
+
+Links
+GitHub: https://github.com/Sparker95/Workshop-Extended

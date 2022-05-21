@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{621D01DAA500C0E9}UI/layouts/WidgetLibrary/TextWidgets/Text_Body.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

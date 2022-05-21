@@ -65,6 +65,29 @@ FrameWidgetClass : "{E6B607B27BCC1477}UI/layouts/Menus/Dialogs/ConfigurableDialo
               }
              }
             }
+            ButtonWidgetClass "{596AC33CE643A811}" : "{17AA0F2E9F6CEFF9}UI/Buttons/ButtonLine_Text_Stack.layout" {
+             Name "m_GitHubButton"
+             Slot LayoutSlot "{5708EA930684ACAB}" {
+              HorizontalAlign 0
+             }
+             components {
+              SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+               m_aEffects {
+                SCR_ButtonEffectText "{5964DDA4253F818A}" {
+                 m_sDefault "GitHub Link"
+                }
+               }
+              }
+             }
+             {
+              SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+               Prefab "{5964DDA49DABBD48}"
+               AllowWidthOverride 0
+               {
+               }
+              }
+             }
+            }
            }
           }
          }
