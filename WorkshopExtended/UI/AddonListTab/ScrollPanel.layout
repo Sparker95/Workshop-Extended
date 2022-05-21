@@ -1,0 +1,70 @@
+SizeLayoutWidgetClass "{5708B183D5E18781}" : "{7C40540517A6F5A0}UI/layouts/Menus/Common/MenuPanelBase.layout" {
+ Name "m_LeftPanel"
+ Slot LayoutSlot "{5708B181186EED3D}" {
+  SizeMode Fill
+ }
+ {
+  VerticalLayoutWidgetClass "{566D37A49FA0832A}" {
+   Prefab "{566D37A49FA0832A}"
+   {
+    ImageWidgetClass "{566D37A48B9B4115}" {
+     Prefab "{566D37A48B9B4115}"
+     Slot LayoutSlot "{566D37A48B9B413D}" {
+      Padding 0 0 24 0
+     }
+    }
+    SizeLayoutWidgetClass "{566D37A4C6C65AF5}" {
+     Prefab "{566D37A4C6C65AF5}"
+     Slot LayoutSlot "{566D37A4C6C65A1E}" {
+      Padding 0 0 24 0
+     }
+     {
+     }
+    }
+    OverlayWidgetClass "{566D37A686A2C2FD}" {
+     Prefab "{566D37A686A2C2FD}"
+     Slot LayoutSlot "{566D37A686A2C202}" {
+      Padding 0 12 7 0
+     }
+     {
+      ImageWidgetClass "{5708B183D5E1879D}" {
+       Name "Background"
+       Slot OverlayWidgetSlot "{56ED2A695AAB6B69}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 4 4 4 4
+       }
+       "Is Visible" 0
+       Opacity 0.86
+       Color 0 0 0 1
+      }
+      ScrollLayoutWidgetClass "{5708B1814DF72230}" {
+       Name "Scroll"
+       Slot OverlayWidgetSlot "{5708B1814DF72255}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.761 0.386 0.08 1
+       {
+        VerticalLayoutWidgetClass "{5708B180B5493C54}" {
+         Name "m_AddonsList"
+         Slot AlignableSlot "{5708B180B5493C7E}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+          Padding 0 0 7 0
+         }
+        }
+       }
+      }
+     }
+    }
+    ImageWidgetClass "{566D37A4D979CAEF}" {
+     Prefab "{566D37A4D979CAEF}"
+     Slot LayoutSlot "{566D37A48B9B413D}" {
+      Padding 0 0 24 0
+     }
+    }
+   }
+  }
+ }
+}

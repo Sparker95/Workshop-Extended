@@ -1,0 +1,79 @@
+FrameWidgetClass : "{E6B607B27BCC1477}UI/layouts/Menus/Dialogs/ConfigurableDialog.layout" {
+ components {
+  SCR_WidgetExportRuleRoot "{596AC3398254863B}" : "{98535A58D347558D}UI/WidgetExportRuleRoot.conf" {
+  }
+ }
+ {
+  OverlayWidgetClass "{56D6D7CE83DA03E8}" {
+   Prefab "{56D6D7CE83DA03E8}"
+   {
+    VerticalLayoutWidgetClass "{5510B6AD7C32873E}" {
+     Prefab "{5510B6AD7C32873E}"
+     {
+      OverlayWidgetClass "{5510B6ACD309D043}" {
+       Prefab "{5510B6ACD309D043}"
+       {
+        SizeLayoutWidgetClass "{56D6D7C13D67473E}" {
+         Prefab "{56D6D7C13D67473E}"
+         {
+          VerticalLayoutWidgetClass "{56D6D7C05CBE4368}" {
+           Prefab "{56D6D7C05CBE4368}"
+           {
+            ButtonWidgetClass "{596AC33626F9615B}" : "{17AA0F2E9F6CEFF9}UI/Buttons/ButtonLine_Text_Stack.layout" {
+             Name "m_GenerateDsJsonButton"
+             Slot LayoutSlot "{5708EA930684ACAB}" {
+              HorizontalAlign 0
+             }
+             components {
+              SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+               m_aEffects {
+                SCR_ButtonEffectText "{5964DDA4253F818A}" {
+                 m_sDefault "Generate Dedicated Server JSON"
+                }
+               }
+              }
+             }
+             {
+              SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+               Prefab "{5964DDA49DABBD48}"
+               AllowWidthOverride 0
+               {
+               }
+              }
+             }
+            }
+            ButtonWidgetClass "{596AC3360BBD4E2F}" : "{17AA0F2E9F6CEFF9}UI/Buttons/ButtonLine_Text_Stack.layout" {
+             Name "m_GenerateCliButton"
+             Slot LayoutSlot "{5708EA930684ACAB}" {
+              HorizontalAlign 0
+             }
+             components {
+              SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+               m_aEffects {
+                SCR_ButtonEffectText "{5964DDA4253F818A}" {
+                 m_sDefault "Generate -addons CLI"
+                }
+               }
+              }
+             }
+             {
+              SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+               Prefab "{5964DDA49DABBD48}"
+               AllowWidthOverride 0
+               {
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

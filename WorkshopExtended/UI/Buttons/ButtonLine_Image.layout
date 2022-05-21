@@ -1,0 +1,128 @@
+ButtonWidgetClass {
+ Name "m_EnableButton"
+ Slot AlignableSlot "{5709334BA334CFFC}" {
+  HorizontalAlign 3
+  VerticalAlign 3
+  Padding 3 0 3 0
+ }
+ components {
+  SCR_ModularButtonComponent "{56D30562A1E185A3}" {
+   m_aEffects {
+    SCR_ButtonEffectVisibility "{5708B18AFB106EA8}" {
+     m_eEvents 24576
+     m_sWidgetName "Image"
+     m_bToggledOn 1
+    }
+    SCR_ButtonEffectOpacity "{5708CAF4B9056A68}" {
+     m_eEvents 15
+     m_sWidgetName "Background"
+     m_fAnimationTime 0
+     m_fHovered 0.5
+     m_fActivated 0
+     m_fActivatedHovered 0.5
+    }
+    SCR_ButtonEffectImage "{5708EA91CDD452E5}" {
+     m_eEvents 15
+     m_sWidgetName "Image"
+     m_ImageSet "{1F0A6C9C19E131C6}UI/Textures/Icons/icons_wrapperUI.imageset"
+     m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132BBBD55}" {
+      m_ImageName "check"
+     }
+     m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91326D3251}" {
+      m_ImageName "check"
+     }
+     m_Activated SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132269D07}" {
+      m_ImageName "check"
+     }
+     m_ActivatedHovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91321B6B59}" {
+      m_ImageName "check"
+     }
+    }
+    SCR_ButtonEffectOpacity "{57090084A5F805C9}" {
+     m_eEvents 15
+     m_sWidgetName "Image"
+     m_fAnimationTime 0
+     m_fDefault 0.6
+     m_fHovered 1
+     m_fActivated 0.6
+     m_fActivatedHovered 1
+    }
+    SCR_ButtonEffectOpacity "{5709008591E62624}" {
+     m_eEvents 15
+     m_sWidgetName "Panel"
+     m_fAnimationTime 0
+     m_fDefault 0.6
+     m_fHovered 1
+     m_fActivated 0.6
+     m_fActivatedHovered 1
+    }
+   }
+   m_bCanBeToggled 1
+   m_eEventReturnValue 2147483599
+  }
+ }
+ style blank
+ "no focus" 1
+ {
+  OverlayWidgetClass "{5708EA93B42C3073}" {
+   Name "Overlay"
+   Slot ButtonWidgetSlot "{5708EA93B42C33A5}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   {
+    FrameWidgetClass "{5708CAF6B08BDDF8}" {
+     Name "Frame"
+     Slot OverlayWidgetSlot "{5708EA93B424A8FA}" {
+     }
+     {
+      OverlayWidgetClass "{5708B18BDD700D33}" {
+       Name "Overlay"
+       Slot FrameWidgetSlot "{5708CAF698ED4B6B}" {
+        Anchor 0.5 0.5 0.5 0.5
+        OffsetLeft 0
+        OffsetTop 0
+        SizeX 30
+        OffsetRight -30
+        SizeY 30
+        OffsetBottom -30
+        Alignment 0.5 0.5
+       }
+       {
+        ImageWidgetClass "{5708CAF34CC35C3E}" {
+         Name "Background"
+         Slot OverlayWidgetSlot "{5708B18BC0E079F0}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Opacity 0.1
+         Color 0 0 0 1
+         Image ""
+         Size 64 64
+        }
+        PanelWidgetClass "{5708B18BC4F04401}" {
+         Name "Panel"
+         Slot OverlayWidgetSlot "{5708B18BC4F044E0}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         style outline_2px
+        }
+        ImageWidgetClass "{5708B18BC0E07910}" {
+         Name "Image"
+         Slot OverlayWidgetSlot "{5708B18BC0E079F0}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Texture "{1F0A6C9C19E131C6}UI/Textures/Icons/icons_wrapperUI.imageset"
+         Image "check"
+         Size 64 64
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

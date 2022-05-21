@@ -1,0 +1,142 @@
+OverlayWidgetClass {
+ Name "rootFrame"
+ Slot AlignableSlot "{59697DF6E21CB1CE}" {
+  HorizontalAlign 3
+  VerticalAlign 3
+ }
+ components {
+  WEXT_AddonBarComponent "{596A0501BA662AD4}" {
+  }
+  SCR_WidgetExportRuleRoot "{596A0B13B586F66F}" : "{98535A58D347558D}UI/WidgetExportRuleRoot.conf" {
+  }
+ }
+ {
+  HorizontalLayoutWidgetClass "{59697DF6EC0EC7D9}" {
+   Name "HorizontalLayout"
+   Slot OverlayWidgetSlot "{59697DF6EC0E383E}" {
+    HorizontalAlign 2
+    VerticalAlign 3
+    Padding 0 0 60 0
+   }
+   {
+    HorizontalLayoutWidgetClass "{596A097684472EC7}" {
+     Name "m_AddonIconsLayout"
+     Slot LayoutSlot "{596A097684472ED3}" {
+     }
+     "Fill Origin" Right
+    }
+    ImageWidgetClass "{596A097698546DC6}" {
+     Name "Separator"
+     Slot LayoutSlot "{596A097698546DD1}" {
+      VerticalAlign 1
+     }
+     "Is Visible" 0
+     Color 0.178 0.178 0.178 1
+     Size 2 45
+    }
+    ButtonWidgetClass "{596A0B10A0DC0773}" : "{071EF3176AAB96DC}UI/Buttons/ButtonLine_ImageText.layout" {
+     Name "m_PresetsButton"
+     Slot LayoutSlot "{5708EA930684ACAB}" {
+      VerticalAlign 1
+     }
+     components {
+      SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+       m_aEffects {
+        SCR_ButtonEffectOpacity "{596AA4644111D7B5}" {
+         m_eEvents 3
+         m_sWidgetName "Border"
+         m_fHovered 1
+        }
+        SCR_ButtonEffectImage "{5708EA928E98671B}" {
+         m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92F1B2F0DA}" {
+          m_ImageName "modIcon"
+         }
+         m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92E650D571}" {
+          m_ImageName "modIcon"
+         }
+        }
+        SCR_ButtonEffectColor "{5708EA92DA27E032}" {
+         m_cDefault 1 1 1 1
+         m_cHovered 1 1 1 1
+        }
+        SCR_ButtonEffectText "{5964DDA4253F818A}" {
+         m_sDefault "Mod Presets"
+         m_sHovered "Mod Presets"
+        }
+       }
+       m_eEventReturnValue 2147483647
+      }
+     }
+     {
+      SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+       Prefab "{5964DDA49DABBD48}"
+       AllowHeightOverride 1
+       HeightOverride 50
+       {
+        OverlayWidgetClass "{5708EA930B28E8E5}" {
+         Prefab "{5708EA930B28E8E5}"
+         {
+          PanelWidgetClass "{596AA4646B103322}" {
+           Name "Border"
+           Slot OverlayWidgetSlot "{596AA4645A2D4B89}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           "Z Order" 10
+           Color 0.761 0.392 0.078 1
+           style outline_2px
+          }
+          HorizontalLayoutWidgetClass "{5708EA92AC0FE392}" {
+           Prefab "{5708EA92AC0FE392}"
+           {
+            ImageWidgetClass "{5708EA929121336C}" {
+             Prefab "{5708EA929121336C}"
+             Size 44 44
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "{596AB8B847B5BF30}" {
+   Name "Frame0"
+   Slot OverlayWidgetSlot "{596AB8B847B5BF1D}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+    Padding 0 0 0 0
+   }
+   {
+    TextWidgetClass "{596AB8B8241F2E3F}" {
+     Name "m_ModsCountText"
+     Slot FrameWidgetSlot "{596AB8B847BCEE16}" {
+      Anchor 1 0.5 1 0.5
+      PositionX -150
+      OffsetLeft -150
+      PositionY -40
+      OffsetTop -40
+      SizeX 175.9
+      OffsetRight -25.9
+      SizeY 30
+      OffsetBottom 10
+      Alignment 0.5 0.5
+      SizeToContent 1
+     }
+     Clipping Ancestor
+     Pivot 0.5 0.5
+     Text "999 mods enabled"
+     "Font Size" 20
+     "Min Font Size" 20
+     "Horizontal Alignment" Center
+     FontProperties FontProperties "{596AB8B81E314C90}" {
+      Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+     }
+    }
+   }
+  }
+ }
+}

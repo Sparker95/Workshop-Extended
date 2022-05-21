@@ -1,0 +1,129 @@
+ButtonWidgetClass {
+ Name "ButtonText"
+ Slot LayoutSlot "{56C91A138E401233}" {
+  Padding 6 6 6 6
+ }
+ Color 1 1 1 0
+ components {
+  SCR_ModularButtonComponent "{56C91A11F1ECB4CD}" {
+   m_aEffects {
+    SCR_ButtonEffectText "{56C91A11E8FE1C7D}" {
+     m_eEvents 24576
+     m_sWidgetName "Text"
+     m_sToggledOn "Enabled"
+     m_sToggledOff "Disabled"
+    }
+    SCR_ButtonEffectColor "{56C91A11339DFCCD}" : "{E1D4A2E7853DE006}Configs/ContentBrowser/ButtonEffect_BackgroundColor.conf" {
+     m_eEvents 31
+    }
+    SCR_ButtonEffectColor "{56C92B83AC9CB9AF}" {
+     m_eEvents EVENT_CLICKED
+     m_sWidgetName "Background"
+     m_fAnimationTime 0
+     m_cClicked 0.604 0.258 0.023 1
+    }
+    SCR_ButtonEffectOpacity "{56C91A1147B8F7FB}" {
+     m_eEvents 6144
+     m_eInputDevices 61
+     m_sWidgetName "Border"
+     m_fAnimationTime 0
+     m_fFocusGained 1
+    }
+    SCR_ButtonEffectOpacity "{56C91A1EA8E4340E}" {
+     m_eEvents EVENT_FOCUS_LOST
+     m_sWidgetName "Border"
+     m_fAnimationTime 0
+    }
+    SCR_ButtonEffectPadding "{56C9528AF3E3E011}" {
+     m_eEvents EVENT_FOCUS_GAINED
+     m_eInputDevices 61
+     m_sWidgetName "Background"
+     m_fAnimationTime 0
+     m_fFocusGained 5
+    }
+    SCR_ButtonEffectText "{570D4CC4D271BDF5}" {
+     m_eEvents STATE_DEFAULT
+     m_sWidgetName "Text"
+     m_sDefault "Text"
+    }
+    SCR_ButtonEffectPadding "{56C9528A09348E86}" {
+     m_eEvents EVENT_FOCUS_LOST
+     m_sWidgetName "Background"
+     m_fAnimationTime 0
+    }
+   }
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{570D4CC76C9C4B76}" {
+   Name "Size"
+   Slot ButtonWidgetSlot "{56C91A13EF3616EA}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   AllowHeightOverride 1
+   HeightOverride 40
+   {
+    OverlayWidgetClass "{570D4CC76C9C4B7F}" {
+     Name "Overlay0"
+     Slot AlignableSlot "{56C91A13D4FF9F53}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     {
+      ImageWidgetClass "{570D4CC76C9C4B7D}" {
+       Name "Background"
+       Slot OverlayWidgetSlot "{56C91A13C8F46B63}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Size 1 1
+      }
+      HorizontalLayoutWidgetClass "{570D4CC76C9C4B03}" {
+       Name "Content"
+       Slot OverlayWidgetSlot "{56C91A13706DC6B8}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 10 0 10 0
+       }
+       "Fill Origin" Right
+       {
+        TextWidgetClass "{570D4CC76C9C4B01}" {
+         Name "Text"
+         Slot LayoutSlot "{56C91A135BD1768A}" {
+          SizeMode Fill
+         }
+         "Font Size" 20
+         "Min Font Size" 20
+         "Horizontal Alignment" Center
+         "Vertical Alignment" Center
+         FontProperties FontProperties "{56C91A10941A6DF0}" {
+          Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+         }
+        }
+       }
+      }
+      PanelWidgetClass "{570D4CC76C9C4B07}" {
+       Name "Border"
+       Slot OverlayWidgetSlot "{56C91A11BFDE316C}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.761 0.386 0.078 1
+       style outline_2px
+      }
+      ImageWidgetClass "{570D4CC76C9C4B05}" {
+       Name "FocusLine"
+       Slot OverlayWidgetSlot "{56D0D4EED3B5B04D}" {
+        HorizontalAlign 3
+        VerticalAlign 2
+       }
+       "Is Visible" 0
+       Size 32 2
+      }
+     }
+    }
+   }
+  }
+ }
+}

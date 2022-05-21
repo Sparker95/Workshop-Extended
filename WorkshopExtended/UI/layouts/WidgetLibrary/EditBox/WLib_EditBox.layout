@@ -1,0 +1,146 @@
+ButtonWidgetClass {
+ Name "EditBoxRoot"
+ Slot AlignableSlot "{5538C206F1963489}" {
+  HorizontalAlign 3
+  Padding 4 4 4 4
+ }
+ Clipping False
+ Color 0 0 0 0
+ components {
+  SCR_EditBoxComponent "{547290FFBD5B33E9}" {
+   m_sSoundClicked "SOUND_FE_BUTTON_SELECT"
+   m_sLabel "Editbox"
+   m_fSizeWithLabel 56
+   m_fSizeWithoutLabel 52
+   m_bShowWriteIcon 1
+   m_sIconImageSet "{D17288006833490F}UI/Textures/Icons/icons_wrapperUI-32.imageset"
+   m_sIconImageName "editor"
+   m_fOpacityDefault 0.02
+   m_fOpacityFocused 0.1
+  }
+ }
+ "Left rule" Stop
+ "Right rule" Stop
+ {
+  SizeLayoutWidgetClass "{5964DDA506D1E023}" : "{37F2B4CB4DDDD310}UI/layouts/WidgetLibrary/BaseElements/WLib_Base.layout" {
+   Name "SizeLayout"
+   Slot ButtonWidgetSlot "{5538C205B27B0F74}" {
+    HorizontalAlign 3
+   }
+   {
+    OverlayWidgetClass "{55367D8E531FD623}" {
+     Prefab "{55367D8E531FD623}"
+     {
+      HorizontalLayoutWidgetClass "{55367D8E4592BC6E}" {
+       Prefab "{55367D8E4592BC6E}"
+       Slot OverlayWidgetSlot "{55367D8E4592B383}" {
+       }
+       {
+        OverlayWidgetClass "{5964DDA506D1E022}" {
+         Name "OverlayPanel"
+         Slot LayoutSlot "{5538C2059A570EB1}" {
+          SizeMode Fill
+         }
+         Color 1 1 1 1
+         {
+          PanelWidgetClass "{5964DDA506D1E025}" {
+           Name "Panel"
+           Slot OverlayWidgetSlot "{5538C2058E52481D}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           "Is Visible" 0
+           "Inherit Color" 1
+           style outline_2px
+          }
+          ImageWidgetClass "{5964DDA506D1E024}" {
+           Name "EditBackground"
+           Slot OverlayWidgetSlot "{5538C20588BB6BFF}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Opacity 0.3
+           Color 1 1 1 1
+           "Inherit Color" 1
+          }
+          ScaleWidgetClass "{5964DDA506D1E027}" {
+           Name "Scale1"
+           Slot OverlayWidgetSlot "{553AB38C59601DC8}" {
+            HorizontalAlign 0
+            Padding -40 0 0 0
+           }
+           {
+            ImageWidgetClass "{5964DDA506D1E026}" {
+             Name "ErrorIcon"
+             Slot OverlayWidgetSlot "{5538C2078EC8DD73}" {
+              HorizontalAlign 0
+              Padding 0 0 0 0
+             }
+             Color 0.93 0.056 0.056 1
+             "Inherit Color" 1
+             Texture "{1F0A6C9C19E131C6}UI/Textures/Icons/icons_wrapperUI.imageset"
+             Image "outdated2"
+             Size 64 64
+            }
+           }
+          }
+          HorizontalLayoutWidgetClass "{5964DDA506D14401}" {
+           Name "HEditBox"
+           Slot OverlayWidgetSlot "{58D095EE846E2A50}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+            Padding 0 0 0 0
+           }
+           {
+            ScaleWidgetClass "{5964DDA506D1441F}" {
+             Name "WriteIconScale"
+             Slot LayoutSlot "{58D095EE89E13D43}" {
+              VerticalAlign 0
+              Padding 0 0 -8 0
+             }
+             {
+              ImageWidgetClass "{5964DDA506D1441C}" {
+               Name "WriteIcon"
+               Slot OverlayWidgetSlot "{5538C2078EC8DD73}" {
+                HorizontalAlign 0
+               }
+               Texture "{1F0A6C9C19E131C6}UI/Textures/Icons/icons_wrapperUI.imageset"
+               Image "editor"
+               Size 32 32
+              }
+             }
+            }
+            EditBoxWidgetClass "{5964DDA506D1441D}" {
+             Name "EditBox"
+             Slot LayoutSlot "{58D095EE83997D18}" {
+              VerticalAlign 0
+              Padding 8 8 8 8
+              SizeMode Fill
+             }
+             Clipping True
+             components {
+              EditBoxFilterComponent "{5538D70DF38310BC}" {
+               m_iCharacterLimit 1000
+              }
+              SCR_EventHandlerComponent "{55850A9A256B3B07}" {
+              }
+             }
+             style blank
+             "Font Size" 20
+             "Use placeholder text" 1
+             "Placeholder text" "#AR-UI_Write_Here"
+             FontProperties FontProperties "{554896CC8367BD77}" {
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{C8F2079F46D7DD15}UI/layouts/Menus/Dialogs/DialogBase.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

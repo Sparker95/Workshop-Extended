@@ -1,0 +1,58 @@
+FrameWidgetClass : "{E6B607B27BCC1477}UI/layouts/Menus/Dialogs/ConfigurableDialog.layout" {
+ {
+  OverlayWidgetClass "{56D6D7CE83DA03E8}" {
+   Prefab "{56D6D7CE83DA03E8}"
+   {
+    VerticalLayoutWidgetClass "{5510B6AD7C32873E}" {
+     Prefab "{5510B6AD7C32873E}"
+     {
+      OverlayWidgetClass "{5510B6ACD309D043}" {
+       Prefab "{5510B6ACD309D043}"
+       {
+        SizeLayoutWidgetClass "{56D6D7C13D67473E}" {
+         Prefab "{56D6D7C13D67473E}"
+         {
+          VerticalLayoutWidgetClass "{56D6D7C05CBE4368}" {
+           Prefab "{56D6D7C05CBE4368}"
+           {
+            SizeLayoutWidgetClass "{57116C341FCAC8E6}" {
+             Name "SizeLayout0"
+             Slot LayoutSlot "{57116C341FCAC89C}" {
+             }
+             AllowMaxDesiredHeight 1
+             MaxDesiredHeight 700
+             {
+              ScrollLayoutWidgetClass "{57116C3567C0BBE0}" {
+               Name "ScrollLayout0"
+               Slot LayoutSlot "{57116C3567C0BB99}" {
+               }
+               {
+                VerticalLayoutWidgetClass "{57116C35F3B347B9}" {
+                 Name "VerticalLayout0"
+                 Slot LayoutSlot "{57116C35F3B34673}" {
+                 }
+                 {
+                  RichTextWidgetClass "{57116C3575D2BDC7}" : "{E256BCCAE8821432}UI/layouts/WidgetLibrary/RichTextWidgets/RichTextBody.layout" {
+                   Name "MessageInScroll"
+                   Slot LayoutSlot "{56E11E5D05EC29F3}" {
+                   }
+                   Text "Text"
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

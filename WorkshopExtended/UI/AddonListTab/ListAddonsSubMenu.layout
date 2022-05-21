@@ -1,0 +1,266 @@
+OverlayWidgetClass {
+ Name "root"
+ Slot AlignableSlot "{56E6ADB0FE9B3FEA}" {
+  VerticalAlign 3
+ }
+ components {
+  SCR_WidgetExportRuleRoot "{567A938DB15206EA}" {
+   DestinationPath "{6BD1A180103E63CF}scripts/Game/WEXT"
+   ScriptAddon "$WorkshopExtended:"
+   ScriptClassNamePrefix "WEXT_"
+  }
+  WEXT_ListAddonsSubmenu "{5964F3A47A51C97D}" {
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{5708B183D5E18784}" {
+   Name "Size"
+   Slot OverlayWidgetSlot "{56E6ADB0E5CBC7E0}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   {
+    HorizontalLayoutWidgetClass "{5708B183D5E18786}" {
+     Name "PanelsHorizontal"
+     Slot OverlayWidgetSlot "{56E6B09694E6B57F}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     {
+      SizeLayoutWidgetClass "{57090086BDCC7379}" : "{03DAA99DF42BEE52}UI/AddonListTab/ScrollPanel.layout" {
+       Name "m_DisabledAddonsPanel"
+       Slot LayoutSlot "{5708B181186EED3D}" {
+       }
+       {
+        VerticalLayoutWidgetClass "{566D37A49FA0832A}" {
+         Prefab "{566D37A49FA0832A}"
+         {
+          SizeLayoutWidgetClass "{566D37A4C6C65AF5}" {
+           Prefab "{566D37A4C6C65AF5}"
+           {
+            OverlayWidgetClass "{566D37A424B030D4}" {
+             Prefab "{566D37A424B030D4}"
+             {
+              OverlayWidgetClass "{56832411C4A58C7C}" {
+               Prefab "{56832411C4A58C7C}"
+               {
+                TextWidgetClass "{57096A4BAFD03579}" : "{E64DA8292CD7DBDD}UI/layouts/WidgetLibrary/TextWidgets/Text_InteractiveSmall.layout" {
+                 Name "Text0"
+                 Slot OverlayWidgetSlot "{57096A4BAFD0348B}" {
+                  HorizontalAlign 3
+                  VerticalAlign 3
+                  Padding 20 0 0 0
+                 }
+                 Text "Disabled"
+                 "Vertical Alignment" Center
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          OverlayWidgetClass "{566D37A686A2C2FD}" {
+           Prefab "{566D37A686A2C2FD}"
+           {
+            ScrollLayoutWidgetClass "{5708B1814DF72230}" {
+             Prefab "{5708B1814DF72230}"
+             components {
+              SCR_WidgetExportRule "{57097EF28EA336FF}" {
+               WidgetVariableName "m_DisabledAddonsScroll"
+              }
+             }
+             {
+              VerticalLayoutWidgetClass "{5708B180B5493C54}" {
+               Prefab "{5708B180B5493C54}"
+               components {
+                SCR_WidgetExportRule "{57093CA80BB3DEE4}" {
+                 ExportChildWidgets 0
+                 WidgetVariableName "m_DisabledAddonsList"
+                }
+               }
+               {
+                ButtonWidgetClass "{57096A4FDA07EF0D}" : "{1E9609F84FF1BF73}UI/AddonListTab/AddonLine.layout" {
+                 Name "AddonLine0"
+                 Slot LayoutSlot "{56A8C50BEACD66F1}" {
+                 }
+                 {
+                 }
+                }
+                ButtonWidgetClass "{57096A4FDB868628}" : "{1E9609F84FF1BF73}UI/AddonListTab/AddonLine.layout" {
+                 Name "AddonLine1"
+                 Slot LayoutSlot "{56A8C50BEACD66F1}" {
+                 }
+                 {
+                 }
+                }
+                ButtonWidgetClass "{57096A4FDBADF944}" : "{1E9609F84FF1BF73}UI/AddonListTab/AddonLine.layout" {
+                 Name "AddonLine2"
+                 Slot LayoutSlot "{56A8C50BEACD66F1}" {
+                 }
+                 {
+                 }
+                }
+                ButtonWidgetClass "{57096A4FDBD5743F}" : "{1E9609F84FF1BF73}UI/AddonListTab/AddonLine.layout" {
+                 Name "AddonLine3"
+                 Slot LayoutSlot "{56A8C50BEACD66F1}" {
+                 }
+                 {
+                 }
+                }
+                ButtonWidgetClass "{57096A4FDBFE0DF1}" : "{1E9609F84FF1BF73}UI/AddonListTab/AddonLine.layout" {
+                 Name "AddonLine4"
+                 Slot LayoutSlot "{56A8C50BEACD66F1}" {
+                 }
+                 {
+                 }
+                }
+               }
+              }
+             }
+            }
+            ImageWidgetClass "{58AEAEFAE5DFF224}" {
+             Prefab "{58AEAEFAE5DFF224}"
+             "Is Visible" 0
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      SizeLayoutWidgetClass "{57090086B91F40F9}" : "{03DAA99DF42BEE52}UI/AddonListTab/ScrollPanel.layout" {
+       Name "m_EnabledAddonsPanel"
+       Slot LayoutSlot "{5708B181186EED3D}" {
+       }
+       {
+        VerticalLayoutWidgetClass "{566D37A49FA0832A}" {
+         Prefab "{566D37A49FA0832A}"
+         {
+          SizeLayoutWidgetClass "{566D37A4C6C65AF5}" {
+           Prefab "{566D37A4C6C65AF5}"
+           {
+            OverlayWidgetClass "{566D37A424B030D4}" {
+             Prefab "{566D37A424B030D4}"
+             {
+              OverlayWidgetClass "{56832411C4A58C7C}" {
+               Prefab "{56832411C4A58C7C}"
+               {
+                TextWidgetClass "{57096A4BE60B9B74}" : "{E64DA8292CD7DBDD}UI/layouts/WidgetLibrary/TextWidgets/Text_InteractiveSmall.layout" {
+                 Name "Text0"
+                 Slot OverlayWidgetSlot "{57096A4BAFD0348B}" {
+                  HorizontalAlign 3
+                  VerticalAlign 3
+                  Padding 20 0 0 0
+                 }
+                 Text "Enabled"
+                 "Vertical Alignment" Center
+                }
+                HorizontalLayoutWidgetClass "{570D4CC445C6251E}" {
+                 Name "HorizontalLayout0"
+                 Slot OverlayWidgetSlot "{570D4CC445C625CB}" {
+                  HorizontalAlign 3
+                  VerticalAlign 3
+                 }
+                 "Fill Origin" Right
+                 {
+                  ButtonWidgetClass "{596AC3381208E1DC}" : "{DB68C9DDD10CFD55}UI/Buttons/ButtonTopBar_Text.layout" {
+                   Name "m_ToolsButton"
+                   Slot LayoutSlot "{56C91A138E401233}" {
+                   }
+                   components {
+                    SCR_ModularButtonComponent "{56C91A11F1ECB4CD}" {
+                     m_aEffects {
+                      SCR_ButtonEffectText "{570D4CC4D271BDF5}" {
+                       m_sDefault "Tools"
+                      }
+                     }
+                    }
+                   }
+                   {
+                    SizeLayoutWidgetClass "{570D4CC76C9C4B76}" {
+                     Prefab "{570D4CC76C9C4B76}"
+                     AllowWidthOverride 1
+                     WidthOverride 100
+                     {
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          OverlayWidgetClass "{566D37A686A2C2FD}" {
+           Prefab "{566D37A686A2C2FD}"
+           {
+            ScrollLayoutWidgetClass "{5708B1814DF72230}" {
+             Prefab "{5708B1814DF72230}"
+             components {
+              SCR_WidgetExportRule "{57097EF2FD698ADB}" {
+               WidgetVariableName "m_EnabledAddonsScroll"
+              }
+             }
+             {
+              VerticalLayoutWidgetClass "{5708B180B5493C54}" {
+               Prefab "{5708B180B5493C54}"
+               components {
+                SCR_WidgetExportRule "{57093CA87C62B75E}" {
+                 ExportChildWidgets 0
+                 WidgetVariableName "m_EnabledAddonsList"
+                }
+               }
+              }
+             }
+            }
+            ImageWidgetClass "{58AEAEFAE5DFF224}" {
+             Prefab "{58AEAEFAE5DFF224}"
+             "Is Visible" 0
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      SizeLayoutWidgetClass "{5708B1835191A985}" : "{7C40540517A6F5A0}UI/layouts/Menus/Common/MenuPanelBase.layout" {
+       Name "RightPanel"
+       Slot LayoutSlot "{5708B1835191A996}" {
+       }
+       AllowWidthOverride 1
+       WidthOverride 528
+       {
+        VerticalLayoutWidgetClass "{566D37A49FA0832A}" {
+         Prefab "{566D37A49FA0832A}"
+         {
+          OverlayWidgetClass "{566D37A686A2C2FD}" {
+           Prefab "{566D37A686A2C2FD}"
+           {
+            OverlayWidgetClass "{5708B1833A6AF268}" : "{4EA90F2E08FAC131}UI/layouts/Menus/Common/DetailsPanel/AddonDetailsPanel.layout" {
+             Name "m_AddonInfoPanel"
+             Slot OverlayWidgetSlot "{56A6BD9A8F2B0008}" {
+             }
+             components {
+              SCR_WidgetExportRule "{5708B18190882F78}" {
+               ExportChildWidgets 0
+              }
+             }
+             {
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

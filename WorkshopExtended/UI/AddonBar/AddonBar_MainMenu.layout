@@ -1,0 +1,43 @@
+OverlayWidgetClass : "{E51B373A4E72E920}UI/AddonBar/AddonBar.layout" {
+ Slot FrameWidgetSlot "{596A2BD693015B14}" {
+  Anchor 0 0 1 1
+  PositionX 0
+  OffsetLeft 0
+  PositionY 0
+  OffsetTop 0
+  SizeX -1820
+  OffsetRight 0
+  SizeY -1050
+  OffsetBottom 0
+ }
+ components {
+  WEXT_AddonBarComponent "{596A0501BA662AD4}" {
+   m_iMaxIcons 8
+  }
+ }
+ {
+  HorizontalLayoutWidgetClass "{59697DF6EC0EC7D9}" {
+   Prefab "{59697DF6EC0EC7D9}"
+   Slot OverlayWidgetSlot "{59697DF6EC0E383E}" {
+    Padding 0 0 0 0
+   }
+   {
+   }
+  }
+  FrameWidgetClass "{596AB8B847B5BF30}" {
+   Prefab "{596AB8B847B5BF30}"
+   {
+    TextWidgetClass "{596AB8B8241F2E3F}" {
+     Prefab "{596AB8B8241F2E3F}"
+     Slot FrameWidgetSlot "{596AB8B847BCEE16}" {
+      PositionX -90
+      OffsetLeft -90
+      OffsetTop -40
+      OffsetRight -85.9
+      OffsetBottom 10
+     }
+    }
+   }
+  }
+ }
+}

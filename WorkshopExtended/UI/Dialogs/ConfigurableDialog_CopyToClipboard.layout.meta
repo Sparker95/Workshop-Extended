@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{61F5CBBC10C15279}UI/layouts/Menus/Dialogs/CopyToClipboardDialog.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

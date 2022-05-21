@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{DB68C9DDD10CFD55}UI/layouts/Menus/ContentBrowser/Buttons/ButtonTopBar_Text.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

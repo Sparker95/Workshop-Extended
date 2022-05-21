@@ -1,0 +1,25 @@
+ButtonWidgetClass : "{071EF3176AAB96DC}UI/Buttons/ButtonLine_ImageText.layout" {
+ Slot LayoutSlot "{5708EA930684ACAB}" {
+  Padding 10 4 10 12
+ }
+ components {
+  SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+   m_aEffects {
+    SCR_ButtonEffectImage "{5708EA928E98671B}" {
+     m_ImageSet "{D17288006833490F}UI/Textures/Icons/icons_wrapperUI-32.imageset"
+    }
+   }
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+   Prefab "{5964DDA49DABBD48}"
+   AllowWidthOverride 1
+   WidthOverride 150
+   AllowHeightOverride 1
+   HeightOverride 48
+   {
+   }
+  }
+ }
+}

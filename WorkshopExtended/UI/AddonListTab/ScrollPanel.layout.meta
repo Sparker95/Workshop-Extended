@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{03DAA99DF42BEE52}UI/WEXT_ScrollPanel.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

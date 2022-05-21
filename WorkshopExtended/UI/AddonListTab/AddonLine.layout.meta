@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{1E9609F84FF1BF73}UI/layouts/Menus/ContentBrowser/ScenariosMenu/WEXT_AddonLine.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

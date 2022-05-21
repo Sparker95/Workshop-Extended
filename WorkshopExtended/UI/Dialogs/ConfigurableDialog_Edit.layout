@@ -1,0 +1,40 @@
+FrameWidgetClass : "{E6B607B27BCC1477}UI/layouts/Menus/Dialogs/ConfigurableDialog.layout" {
+ {
+  OverlayWidgetClass "{56D6D7CE83DA03E8}" {
+   Prefab "{56D6D7CE83DA03E8}"
+   {
+    VerticalLayoutWidgetClass "{5510B6AD7C32873E}" {
+     Prefab "{5510B6AD7C32873E}"
+     {
+      OverlayWidgetClass "{5510B6ACD309D043}" {
+       Prefab "{5510B6ACD309D043}"
+       {
+        SizeLayoutWidgetClass "{56D6D7C13D67473E}" {
+         Prefab "{56D6D7C13D67473E}"
+         {
+          VerticalLayoutWidgetClass "{56D6D7C05CBE4368}" {
+           Prefab "{56D6D7C05CBE4368}"
+           {
+            EditBoxWidgetClass "{570B469E05978214}" {
+             Name "MessageEdit"
+             Slot LayoutSlot "{570B469E059782D7}" {
+             }
+             Clipping Ancestor
+             text "TextText"
+             "Font Size" 20
+             FontProperties FontProperties "{570B469E5E43BDA0}" {
+              Font "{0E041C5B1F27DCEA}system/robotomono_msdf_28.fnt"
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

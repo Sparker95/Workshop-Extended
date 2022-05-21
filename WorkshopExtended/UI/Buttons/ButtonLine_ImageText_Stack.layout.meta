@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{3FCDB81DF767F7A4}UI/Buttons/ButtonLine_ImageText_Stack.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{1CD01B67A4659AC1}UI/layouts/ListBox/ListBoxElement_Text_FullWidth.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

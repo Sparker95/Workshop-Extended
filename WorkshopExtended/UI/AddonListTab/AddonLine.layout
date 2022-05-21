@@ -1,0 +1,446 @@
+ButtonWidgetClass {
+ Name "AddonLine"
+ Slot LayoutSlot "{56A8C50BEACD66F1}" {
+  Padding 0 0 0 0
+ }
+ Color 0 0 0 0
+ components {
+  SCR_WidgetExportRuleRoot "{56A6DDC519C79700}" {
+   DestinationPath "{6BD1A180103E63CF}scripts/Game/WEXT"
+   ScriptAddon "$WorkshopExtended:"
+   ScriptClassNamePrefix "WEXT_"
+  }
+  SCR_ModularButtonComponent "{5708B189AFAAE87E}" {
+   m_aEffects {
+    SCR_ButtonEffectOpacity "{5708B189AACD4774}" {
+     m_eEvents 15
+     m_sWidgetName "m_LineBackground"
+     m_fAnimationTime 0
+     m_fDefault 0.5
+     m_fHovered 0.8
+     m_fActivated 0.8
+     m_fActivatedHovered 0.8
+    }
+    SCR_ButtonEffectVisibility "{5708B1893069DE6A}" {
+     m_eEvents 3
+     m_sWidgetName "m_DeleteButton"
+     m_bHovered 1
+     m_bToggledOn 1
+    }
+    SCR_ButtonEffectVisibility "{571207FBCD91FDB9}" {
+     m_eEvents 3
+     m_sWidgetName "m_OpenDetailsButton"
+     m_bHovered 1
+    }
+   }
+  }
+  WEXT_AddonLineComponent "{5708CAF8A4963FE8}" {
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{5708B1842AFDF06E}" {
+   Name "LineHeight"
+   Slot ButtonWidgetSlot "{56A6DDC32D69C9B1}" {
+    HorizontalAlign 3
+    Padding 0 0 0 4
+   }
+   AllowHeightOverride 1
+   HeightOverride 40
+   {
+    OverlayWidgetClass "{5708B1842AFDF069}" {
+     Name "Overlay"
+     Slot AlignableSlot "{56A6DDC0FB6F5C38}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 1 1 1 1
+     {
+      OverlayWidgetClass "{5708B1842AFDF06A}" {
+       Name "LineContent"
+       Slot OverlayWidgetSlot "{56A6DDC5F6EA1973}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       {
+        ImageWidgetClass "{5708B1842AFDF06B}" {
+         Name "m_LineBackground"
+         Slot OverlayWidgetSlot "{56A6DDC5A5263FF2}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Color 0 0 0 1
+        }
+        ImageWidgetClass "{5708B189FC332AAB}" {
+         Name "LineBackgroundBlack"
+         Slot OverlayWidgetSlot "{56A6DDC5A5263FF2}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         "Is Visible" 0
+         Color 0 0 0 1
+        }
+        HorizontalLayoutWidgetClass "{5708B1842AFDF064}" {
+         Name "LineElements"
+         Slot OverlayWidgetSlot "{56A6DDC0D2ED7BC6}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+          Padding 2 0 2 0
+         }
+         {
+          ButtonWidgetClass "{57092CD3ECDDF489}" : "{432C497161F2F1EA}UI/Buttons/ButtonLine_Image.layout" {
+           Name "m_MoveLeftButton"
+           Slot LayoutSlot "{57092CD2D9BA4C84}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+            Padding 3 0 3 0
+           }
+           components {
+            SCR_ModularButtonComponent "{56D30562A1E185A3}" {
+             m_aEffects {
+              SCR_ButtonEffectImage "{5708EA91CDD452E5}" {
+               m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132BBBD55}" {
+                m_ImageName "up"
+               }
+               m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91326D3251}" {
+                m_ImageName "up"
+               }
+               m_Activated SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132269D07}" {
+                m_ImageName "up"
+               }
+               m_ActivatedHovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91321B6B59}" {
+                m_ImageName "up"
+               }
+              }
+              SCR_ButtonEffectOpacity "{57090084A5F805C9}" {
+               m_fDefault 0.8
+              }
+             }
+             m_bCanBeToggled 0
+            }
+           }
+           {
+            OverlayWidgetClass "{5708EA93B42C3073}" {
+             Prefab "{5708EA93B42C3073}"
+             {
+              FrameWidgetClass "{5708CAF6B08BDDF8}" {
+               Prefab "{5708CAF6B08BDDF8}"
+               {
+                OverlayWidgetClass "{5708B18BDD700D33}" {
+                 Prefab "{5708B18BDD700D33}"
+                 Slot FrameWidgetSlot "{5708CAF698ED4B6B}" {
+                  OffsetLeft 0
+                  OffsetTop 0
+                  OffsetRight -30
+                  OffsetBottom -30
+                 }
+                 {
+                  ImageWidgetClass "{5708B18BC0E07910}" {
+                   Prefab "{5708B18BC0E07910}"
+                   Rotation -90
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          ButtonWidgetClass "{5709008518902D80}" : "{071EF3176AAB96DC}UI/Buttons/ButtonLine_ImageText.layout" {
+           Name "m_ActionButton"
+           Slot LayoutSlot "{5708EA930684ACAB}" {
+            Padding 3 4 3 4
+           }
+           components {
+            SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+             m_aEffects {
+              SCR_ButtonEffectText "{57093CBD09794F09}" {
+               m_aTags {
+                "text"
+               }
+               m_eEvents 3
+               m_sWidgetName "Text"
+               m_sDefault "Text"
+               m_sHovered "Text"
+              }
+             }
+            }
+           }
+           {
+           }
+          }
+          TextWidgetClass "{5708B1842AFDF060}" {
+           Name "m_NameText"
+           Slot LayoutSlot "{56A6DDC0C59A5A33}" {
+            Padding 6 0 0 0
+            SizeMode Fill
+            FillWeight 0.4
+           }
+           Text "Name"
+           "Font Size" 20
+           "Min Font Size" 16
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{56A6DDC06A459F96}" {
+            Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+           }
+          }
+          TextWidgetClass "{5708CAFACB0D4B9C}" {
+           Name "m_StateText"
+           Slot LayoutSlot "{56A6DDC0C59A5A33}" {
+            Padding 6 0 3 0
+            FillWeight 0.4
+           }
+           Color 0.761 0.392 0.078 1
+           Text "State"
+           "Font Size" 20
+           "Min Font Size" 16
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{56A6DDC06A459F96}" {
+            Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+           }
+          }
+          ButtonWidgetClass "{5708EA97A7F2A87E}" : "{432C497161F2F1EA}UI/Buttons/ButtonLine_Image.layout" {
+           Name "m_DeleteButton"
+           Slot LayoutSlot "{5708EA97A7F2AB86}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+            Padding 3 0 3 0
+           }
+           components {
+            SCR_ModularButtonComponent "{56D30562A1E185A3}" {
+             m_aEffects {
+              SCR_ButtonEffectVisibility "{5708B18AFB106EA8}" {
+               m_bEnabled 0
+               m_bToggledOn 0
+              }
+              SCR_ButtonEffectImage "{5708EA91CDD452E5}" {
+               m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132BBBD55}" {
+                m_ImageName "cancel"
+               }
+               m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91326D3251}" {
+                m_ImageName "cancel"
+               }
+              }
+              SCR_ButtonEffectOpacity "{5708CAF4B9056A68}" {
+               m_fHovered 1
+              }
+              SCR_ButtonEffectColor "{5708EA9D1C775AFB}" {
+               m_eEvents 3
+               m_sWidgetName "Background"
+               m_fAnimationTime 0
+               m_cDefault 0.631 0.003 0.003 1
+               m_cHovered 0.631 0.003 0.003 1
+              }
+             }
+             m_bCanBeToggled 0
+             m_bToggledAtStart 0
+            }
+           }
+           {
+            OverlayWidgetClass "{5708EA93B42C3073}" {
+             Prefab "{5708EA93B42C3073}"
+             {
+              FrameWidgetClass "{5708CAF6B08BDDF8}" {
+               Prefab "{5708CAF6B08BDDF8}"
+               {
+                OverlayWidgetClass "{5708B18BDD700D33}" {
+                 Prefab "{5708B18BDD700D33}"
+                 Slot FrameWidgetSlot "{5708CAF698ED4B6B}" {
+                  OffsetLeft 0
+                  OffsetTop 0
+                  OffsetRight -30
+                  OffsetBottom -30
+                 }
+                 {
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          ButtonWidgetClass "{57092CD02F03B87A}" : "{432C497161F2F1EA}UI/Buttons/ButtonLine_Image.layout" {
+           Name "m_OpenDetailsButton"
+           Slot LayoutSlot "{57092CD02F03BB83}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+            Padding 8 0 8 0
+           }
+           components {
+            SCR_ModularButtonComponent "{56D30562A1E185A3}" {
+             m_aEffects {
+              SCR_ButtonEffectVisibility "{5708B18AFB106EA8}" {
+               m_bEnabled 0
+              }
+              SCR_ButtonEffectImage "{5708EA91CDD452E5}" {
+               m_bEnabled 0
+               m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132BBBD55}" {
+                m_ImageName "up"
+               }
+               m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91326D3251}" {
+                m_ImageName "up"
+               }
+              }
+              SCR_ButtonEffectOpacity "{57090084A5F805C9}" {
+               m_sWidgetName "Arrow"
+              }
+              SCR_ButtonEffectPosition "{5709334FA723137D}" {
+               m_eEvents 3
+               m_sWidgetName "ArrowFrame"
+               m_vAnimationTime 0
+               m_vDefault 0 0 0
+               m_vHovered 2 -2 0
+              }
+              SCR_ButtonEffectOpacity "{5708CAF4B9056A68}" {
+               m_fDefault 0
+              }
+             }
+             m_bCanBeToggled 0
+            }
+           }
+           {
+            OverlayWidgetClass "{5708EA93B42C3073}" {
+             Prefab "{5708EA93B42C3073}"
+             {
+              FrameWidgetClass "{5708CAF6B08BDDF8}" {
+               Prefab "{5708CAF6B08BDDF8}"
+               {
+                FrameWidgetClass "{5709334C1D8A44D3}" {
+                 Name "ArrowFrame"
+                 Slot FrameWidgetSlot "{5709334C1D8A4403}" {
+                  Anchor 0.5 0.5 0.5 0.5
+                  PositionX 0
+                  OffsetLeft 0
+                  PositionY 0
+                  OffsetTop 0
+                  SizeX 0
+                  OffsetRight 0
+                  SizeY 0
+                  OffsetBottom 0
+                  Alignment 0.5 0.5
+                 }
+                 "Z Order" 1
+                 Clipping False
+                 {
+                  ImageWidgetClass "{5709334E2B2469B2}" {
+                   Name "Arrow"
+                   Slot FrameWidgetSlot "{5709334E2B2469E2}" {
+                    Anchor 0.5 0.5 0.5 0.5
+                    PositionX 0
+                    OffsetLeft 0
+                    PositionY 0
+                    OffsetTop 0
+                    SizeX 24
+                    OffsetRight -24
+                    SizeY 24
+                    OffsetBottom -24
+                    Alignment 0.5 0.5
+                   }
+                   "Z Order" 10
+                   Rotation 45
+                   Texture "{1F0A6C9C19E131C6}UI/Textures/Icons/icons_wrapperUI.imageset"
+                   Image "up"
+                   Size 64 64
+                  }
+                 }
+                }
+                OverlayWidgetClass "{5708B18BDD700D33}" {
+                 Prefab "{5708B18BDD700D33}"
+                 Slot FrameWidgetSlot "{5708CAF698ED4B6B}" {
+                  OffsetLeft 0
+                  OffsetTop 0
+                  OffsetRight -30
+                  OffsetBottom -30
+                 }
+                 {
+                  ImageWidgetClass "{5708B18BC0E07910}" {
+                   Prefab "{5708B18BC0E07910}"
+                   "Is Visible" 0
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          ButtonWidgetClass "{57092CD2D9BA4D61}" : "{432C497161F2F1EA}UI/Buttons/ButtonLine_Image.layout" {
+           Name "m_MoveRightButton"
+           Slot LayoutSlot "{57092CD2D9BA4C84}" {
+            Padding 3 0 3 0
+           }
+           components {
+            SCR_ModularButtonComponent "{56D30562A1E185A3}" {
+             m_aEffects {
+              SCR_ButtonEffectImage "{5708EA91CDD452E5}" {
+               m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132BBBD55}" {
+                m_ImageName "up"
+               }
+               m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91326D3251}" {
+                m_ImageName "up"
+               }
+               m_Activated SCR_ButtonEffectImage_ImageOrImageSet "{5708EA9132269D07}" {
+                m_ImageName "up"
+               }
+               m_ActivatedHovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA91321B6B59}" {
+                m_ImageName "up"
+               }
+              }
+              SCR_ButtonEffectOpacity "{57090084A5F805C9}" {
+               m_fDefault 0.8
+              }
+             }
+             m_bCanBeToggled 0
+            }
+           }
+           {
+            OverlayWidgetClass "{5708EA93B42C3073}" {
+             Prefab "{5708EA93B42C3073}"
+             {
+              FrameWidgetClass "{5708CAF6B08BDDF8}" {
+               Prefab "{5708CAF6B08BDDF8}"
+               {
+                OverlayWidgetClass "{5708B18BDD700D33}" {
+                 Prefab "{5708B18BDD700D33}"
+                 Slot FrameWidgetSlot "{5708CAF698ED4B6B}" {
+                  OffsetLeft 0
+                  OffsetTop 0
+                  OffsetRight -30
+                  OffsetBottom -30
+                 }
+                 {
+                  ImageWidgetClass "{5708B18BC0E07910}" {
+                   Prefab "{5708B18BC0E07910}"
+                   Rotation 90
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass "{5708B1842AFA1987}" {
+       Name "LineBorder"
+       Slot OverlayWidgetSlot "{56A6DDC368941F20}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 0 0 0 0
+       }
+       Opacity 0
+       Color 0.761 0.392 0.078 1
+       style outline_2px
+      }
+     }
+    }
+   }
+  }
+ }
+}

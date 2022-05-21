@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{3D8774B818C15FA2}UI/layouts/Menus/Dialogs/ConfigurableDialog_Tools.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

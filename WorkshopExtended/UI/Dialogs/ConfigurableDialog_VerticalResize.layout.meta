@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{9968C95BFEF504EC}UI/layouts/Menus/Dialogs/ConfigurableDialog_VerticalResize.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

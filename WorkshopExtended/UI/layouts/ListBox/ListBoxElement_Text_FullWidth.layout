@@ -1,0 +1,73 @@
+ButtonWidgetClass {
+ Name "ListBoxElement"
+ Slot LayoutSlot "{5967536D303CFA49}" {
+  Padding 0 0 4 4
+ }
+ components {
+  SCR_ListBoxElementComponent "{56CB58E7628E6533}" : "{2D2F81F501855B34}Configs/UI/ListBoxElement_ModularButtonComponent.conf" {
+   m_aEffects {
+    SCR_ButtonEffectOpacity "{5967501B69D78D46}" {
+     m_eEvents 15
+     m_sWidgetName "Background"
+     m_fDefault 0.4
+     m_fHovered 0.8
+     m_fActivated 0.8
+     m_fActivatedHovered 0.8
+    }
+   }
+  }
+ }
+ style blank
+ {
+  SizeLayoutWidgetClass "{5967501BCAE6BC9C}" {
+   Name "SizeLayout"
+   Slot ButtonWidgetSlot "{5548E6E7E6AEDDC1}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   AllowHeightOverride 1
+   HeightOverride 36
+   {
+    OverlayWidgetClass "{5967501BCAE6BC9A}" {
+     Name "Overlay"
+     Slot ButtonWidgetSlot "{5548E6E7F213FB11}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Clipping False
+     {
+      PanelWidgetClass "{5967501BCAE6BC9B}" {
+       Name "Border"
+       Slot OverlayWidgetSlot "{5548E6E7D859FCD2}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.761 0.386 0.08 1
+       style outline_2px
+      }
+      TextWidgetClass "{5967501BCAE6BC98}" : "{E64DA8292CD7DBDD}UI/layouts/WidgetLibrary/TextWidgets/Text_InteractiveSmall.layout" {
+       Name "Text"
+       Slot OverlayWidgetSlot "{569519C7FDE79DBD}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 8 8 8 8
+       }
+       "Z Order" 8
+       "Min Font Size" 20
+       "Vertical Alignment" Center
+      }
+      ImageWidgetClass "{5967501B07833E22}" {
+       Name "Background"
+       Slot OverlayWidgetSlot "{5967501B07833E0B}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       "Z Order" -10
+       Color 0 0 0 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

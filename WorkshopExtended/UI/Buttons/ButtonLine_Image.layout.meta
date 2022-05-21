@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{432C497161F2F1EA}UI/WEXT_LineImageButton.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

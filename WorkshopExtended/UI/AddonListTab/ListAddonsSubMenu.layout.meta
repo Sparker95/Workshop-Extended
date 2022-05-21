@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{0FFE02F22D314775}UI/ContentBrowser_AddonsSubMenuBaseCopy2.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

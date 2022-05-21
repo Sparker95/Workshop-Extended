@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{C550B4911FA03AD5}UI/Buttons/ButtonLine_Text.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

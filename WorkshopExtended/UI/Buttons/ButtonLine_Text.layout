@@ -1,0 +1,23 @@
+ButtonWidgetClass : "{071EF3176AAB96DC}UI/Buttons/ButtonLine_ImageText.layout" {
+ {
+  SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+   Prefab "{5964DDA49DABBD48}"
+   {
+    OverlayWidgetClass "{5708EA930B28E8E5}" {
+     Prefab "{5708EA930B28E8E5}"
+     {
+      HorizontalLayoutWidgetClass "{5708EA92AC0FE392}" {
+       Prefab "{5708EA92AC0FE392}"
+       {
+        ImageWidgetClass "{5708EA929121336C}" {
+         Prefab "{5708EA929121336C}"
+         "Is Visible" 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

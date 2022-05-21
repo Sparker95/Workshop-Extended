@@ -1,0 +1,135 @@
+OverlayWidgetClass "{5964DDA63B776ED8}" {
+ Name "DialogBase"
+ Slot FrameWidgetSlot "{5510B6AD02D313DF}" {
+  Anchor 0.5 0.5 0.5 0.5
+  PositionX 0
+  OffsetLeft 0
+  PositionY 0
+  OffsetTop 0
+  SizeX 600
+  OffsetRight -600
+  SizeY 300
+  OffsetBottom -300
+  Alignment 0.5 0.5
+ }
+ {
+  BlurWidgetClass "{5964DDA63B776EDE}" : "{352322057FD78AE1}UI/layouts/WidgetLibrary/BaseElements/WLib_Blur.layout" {
+   Name "Blur"
+   Slot OverlayWidgetSlot "{5510B6ACB000E435}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   "Is Visible" 0
+   Color 1 1 1 1
+   Intensity 1
+  }
+  ImageWidgetClass "{5964DDA63B776EDC}" {
+   Name "Background"
+   Slot OverlayWidgetSlot "{5558A7C18E7F73F5}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   Color 0.004 0.007 0.007 1
+  }
+  VerticalLayoutWidgetClass "{5964DDA63B776ED3}" {
+   Name "VerticalLayout"
+   Slot OverlayWidgetSlot "{5510B6AD02CB5CFF}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   {
+    ImageWidgetClass "{5964DDA63B776ED2}" {
+     Name "Separator"
+     Slot LayoutSlot "{5510B6AC95797C6F}" {
+     }
+     Color 1 1 1 1
+     Image ""
+     Size 4 3
+    }
+    ImageWidgetClass "{5964DDA63B776ED1}" {
+     Name "ImgTitleIcon"
+     Slot LayoutSlot "{56CAA30A22E3F49C}" {
+      HorizontalAlign 0
+      Padding 25 25 0 0
+     }
+     Texture "{1F0A6C9C19E131C6}UI/Textures/Icons/icons_wrapperUI.imageset"
+     Image "misc"
+     Size 48 48
+    }
+    TextWidgetClass "{5964DDA63B776ED0}" : "{0D7FF083FDE39877}UI/layouts/WidgetLibrary/TextWidgets/Text_Heading4.layout" {
+     Name "Title"
+     Slot LayoutSlot "{5558A7C1F9BF5F8A}" {
+      Padding 80 -39 25 0
+     }
+     Clipping False
+     Color 1 1 1 1
+     Text "Dialog"
+    }
+    OverlayWidgetClass "{5964DDA63B776ED7}" {
+     Name "Content"
+     Slot LayoutSlot "{5510B6ACD309D020}" {
+      Padding 25 40 25 0
+      SizeMode Fill
+     }
+    }
+    HorizontalLayoutWidgetClass "{5964DDA63B748F95}" {
+     Name "Footer"
+     Slot LayoutSlot "{5510B6AC9B6E1FA4}" {
+      Padding 25 20 25 20
+     }
+     {
+      FrameWidgetClass "{5964DDA63B748F97}" {
+       Name "Spacer1"
+       Slot LayoutSlot "{5558A7C15A201FD5}" {
+        SizeMode Fill
+       }
+       "Is Visible" 0
+      }
+      ButtonWidgetClass "{5964DDA63B748F96}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
+       Name "Cancel"
+       Slot LayoutSlot "{5592C59F26008320}" {
+        Padding 10 0 10 0
+       }
+       components {
+        SCR_NavigationButtonComponent "{5474BAC5DBCF129A}" {
+         m_sSoundClicked "SOUND_FE_BUTTON_CANCEL"
+         m_sLabel " #AR-Workshop_ButtonCancel"
+         m_sActionName "MenuBack"
+        }
+       }
+       {
+       }
+      }
+      OverlayWidgetClass "{5964DDA63B748E69}" {
+       Name "SpacerCenter"
+       Slot LayoutSlot "{56F49A83402A0826}" {
+        SizeMode Fill
+       }
+      }
+      ButtonWidgetClass "{5964DDA63B748E68}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
+       Name "Confirm"
+       Slot LayoutSlot "{5592C59F26008320}" {
+        Padding 10 0 10 0
+       }
+       components {
+        SCR_NavigationButtonComponent "{5474BAC5DBCF129A}" {
+         m_sLabel "#AR-Menu_OK"
+         m_sActionName "DialogConfirm"
+        }
+       }
+       {
+       }
+      }
+      FrameWidgetClass "{5964DDA63B748E6B}" {
+       Name "Spacer2"
+       Slot LayoutSlot "{5558A7C15A201FD5}" {
+        SizeMode Fill
+       }
+       "Is Visible" 0
+      }
+     }
+    }
+   }
+  }
+ }
+}

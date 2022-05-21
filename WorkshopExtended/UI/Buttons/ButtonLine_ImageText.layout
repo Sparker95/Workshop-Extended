@@ -1,0 +1,121 @@
+ButtonWidgetClass {
+ Name "Button"
+ Slot LayoutSlot "{5708EA930684ACAB}" {
+  Padding 10 4 10 4
+ }
+ Color 1 1 1 0
+ components {
+  SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+   m_aEffects {
+    SCR_ButtonEffectOpacity "{5708EA935C030607}" {
+     m_eEvents 3
+     m_sWidgetName "Background"
+     m_fAnimationTime 0
+     m_fDefault 0.5
+     m_fHovered 0.8
+    }
+    SCR_ButtonEffectOpacity "{5708EA9232E090D7}" {
+     m_eEvents 3
+     m_sWidgetName "Image"
+     m_fAnimationTime 0
+     m_fDefault 0.8
+     m_fHovered 1
+    }
+    SCR_ButtonEffectImage "{5708EA928E98671B}" {
+     m_eEvents 3
+     m_sWidgetName "Image"
+     m_ImageSet "{9DA6A249AD4D71C4}UI/Textures/Icons/icons_wrapperUI-48.imageset"
+     m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92F1B2F0DA}" {
+      m_ImageName "warning"
+     }
+     m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92E650D571}" {
+      m_ImageName "warning"
+     }
+    }
+    SCR_ButtonEffectColor "{5708EA92DA27E032}" {
+     m_eEvents 3
+     m_sWidgetName "Image"
+     m_fAnimationTime 0
+     m_cDefault 0.761 0.392 0.078 1
+     m_cHovered 0.761 0.392 0.078 1
+    }
+    SCR_ButtonEffectOpacity "{5708EA91AF480757}" {
+     m_eEvents 3
+     m_sWidgetName "Text"
+     m_fAnimationTime 0
+     m_fDefault 0.7
+     m_fHovered 1
+    }
+    SCR_ButtonEffectText "{5964DDA4253F818A}" {
+     m_eEvents STATE_DEFAULT
+     m_sWidgetName "Text"
+     m_sDefault "Button Text"
+    }
+   }
+   m_eEventReturnValue 2147483587
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+   Name "Size"
+   Slot ButtonWidgetSlot "{5964DDA49DABBD6A}" {
+    HorizontalAlign 3
+    VerticalAlign 3
+   }
+   {
+    OverlayWidgetClass "{5708EA930B28E8E5}" {
+     Name "Overlay"
+     Slot ButtonWidgetSlot "{5708EA930B28E805}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     {
+      ImageWidgetClass "{5708EA9366046C78}" {
+       Name "Background"
+       Slot OverlayWidgetSlot "{5708EA9366046F9C}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0 0 0 1
+       Size 1 1
+      }
+      HorizontalLayoutWidgetClass "{5708EA92AC0FE392}" {
+       Name "HorizontalLayout"
+       Slot OverlayWidgetSlot "{5708EA92AC0FE3BA}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 4 0 10 0
+       }
+       {
+        ImageWidgetClass "{5708EA929121336C}" {
+         Name "Image"
+         Slot LayoutSlot "{5708EA9291213373}" {
+          HorizontalAlign 1
+          VerticalAlign 1
+         }
+         Size 30 30
+        }
+        TextWidgetClass "{5708EA929AC8512E}" {
+         Name "Text"
+         Slot LayoutSlot "{56A6DDC0C59A5A33}" {
+          Padding 2 0 0 0
+          SizeMode Fill
+          FillWeight 0.4
+         }
+         Text "Text"
+         "Font Size" 20
+         "Min Font Size" 16
+         "Horizontal Alignment" Center
+         "Vertical Alignment" Center
+         FontProperties FontProperties "{56A6DDC06A459F96}" {
+          Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

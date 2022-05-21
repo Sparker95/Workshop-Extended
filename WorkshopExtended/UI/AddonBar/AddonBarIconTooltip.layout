@@ -1,0 +1,60 @@
+FrameWidgetClass {
+ Name "TooltipFrame"
+ Slot FrameWidgetSlot "{596A0B1A8316A4D6}" {
+  OffsetLeft 0
+  OffsetTop 0
+  SizeX 200
+  OffsetRight -200
+  SizeY 50
+  OffsetBottom -50
+  SizeToContent 1
+ }
+ {
+  OverlayWidgetClass "{596A0B1A7336D98F}" {
+   Name "Overlay"
+   Slot FrameWidgetSlot "{596A0B1DA5DD9A97}" {
+    OffsetLeft 0
+    OffsetTop 0
+    SizeX 0
+    OffsetRight 0
+    SizeY 0
+    OffsetBottom 0
+    SizeToContent 1
+   }
+   {
+    ImageWidgetClass "{596A0B1B5A915C4B}" {
+     Name "Background"
+     Slot OverlayWidgetSlot "{596A0B1DA99EB69A}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0 0.001 0.001 1
+    }
+    TextWidgetClass "{596A0B1B4E5523D2}" {
+     Name "Text"
+     Slot OverlayWidgetSlot "{596A0B1DAABAB8D0}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding 8 2 8 2
+     }
+     "Font Size" 20
+     "Min Font Size" 16
+     "Vertical Alignment" Center
+     Wrap 1
+     FontProperties FontProperties "{572EFC678AD96F30}" {
+      Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     }
+    }
+    PanelWidgetClass "{596A0B1DCB61F243}" {
+     Name "Panel0"
+     Slot OverlayWidgetSlot "{596A0B1DCB61F25D}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0.051 0.051 0.051 1
+     style outline_2px
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,93 @@
+ButtonWidgetClass {
+ Name "AddonIcon"
+ Slot LayoutSlot "{59696D79EF87B40C}" {
+  Padding 0 0 0 0
+ }
+ Color 1 1 1 0
+ components {
+  SCR_WidgetExportRuleRoot "{59696D7B543EA842}" : "{98535A58D347558D}UI/WidgetExportRuleRoot.conf" {
+  }
+  SCR_HoverDetectorComponent "{596A0B18C0F5225F}" {
+   m_fHoverDelayMs 50
+  }
+  WEXT_AddonBarIconComponent "{596A0542D05554FC}" {
+  }
+  SCR_ModularButtonComponent "{596A0B1C27C690A5}" {
+   m_aEffects {
+    SCR_ButtonEffectOpacity "{596A0B1C2ABCD9D1}" {
+     m_eEvents 3
+     m_sWidgetName "Border"
+     m_fHovered 1
+    }
+   }
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{59696D78E637F3AC}" {
+   Name "Size"
+   Slot ButtonWidgetSlot "{59696D78E637F396}" {
+    Padding 5 0 5 0
+   }
+   AllowWidthOverride 1
+   WidthOverride 74
+   AllowHeightOverride 1
+   HeightOverride 41
+   {
+    OverlayWidgetClass "{59696D782DE3DA59}" {
+     Name "m_BackendImage"
+     Slot AlignableSlot "{59696D782DE3DAB1}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     components {
+      SCR_WorkshopItemBackendImageComponent "{59696D7E66787C95}" {
+       m_iScreenSizeCoefficient 0.05
+       m_sImageWidgetName "Image"
+       m_sImageSizeWidgetName "ImageScale"
+      }
+     }
+     {
+      ScaleWidgetClass "{59696D781E51631E}" {
+       Name "ImageScale"
+       Slot OverlayWidgetSlot "{59696D781E51636A}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       "Scale Mode" "Scale to fill"
+       {
+        ImageWidgetClass "{59696D7866BF99DA}" {
+         Name "Image"
+         Slot OverlayWidgetSlot "{59696D7866BF9A35}" {
+         }
+        }
+       }
+      }
+      PanelWidgetClass "{596A2242BAD39B99}" {
+       Name "BorderStatic"
+       Slot OverlayWidgetSlot "{596A0B1CE6621AAA}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding -2 -2 -2 -2
+       }
+       Opacity 0.058
+       Clipping False
+       style outline_2px
+      }
+      PanelWidgetClass "{596A0B1CE6621A51}" {
+       Name "Border"
+       Slot OverlayWidgetSlot "{596A0B1CE6621AAA}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding -2 -2 -2 -2
+       }
+       Clipping False
+       Color 0.761 0.392 0.078 1
+       style outline_2px
+      }
+     }
+    }
+   }
+  }
+ }
+}
