@@ -1,0 +1,48 @@
+OverlayWidgetClass : "{FACCFE81F2C2C1FD}UI/layouts/Menus/ContentBrowser/MainMenu/ContentBrowser_AddonsSubMenuBase.layout" {
+ {
+  SizeLayoutWidgetClass "{56E6ADB0E5CBC7D0}" {
+   Prefab "{56E6ADB0E5CBC7D0}"
+   {
+    HorizontalLayoutWidgetClass "{566D37A7CC835866}" {
+     Prefab "{566D37A7CC835866}"
+     {
+      OverlayWidgetClass "{56B96661A2EF7080}" {
+       Prefab "{56B96661A2EF7080}"
+       {
+        SizeLayoutWidgetClass "{566D37A64E340F2C}" {
+         Prefab "{566D37A64E340F2C}"
+         {
+          VerticalLayoutWidgetClass "{566D37A49FA0832A}" {
+           Prefab "{566D37A49FA0832A}"
+           {
+            OverlayWidgetClass "{566D37A686A2C2FD}" {
+             Prefab "{566D37A686A2C2FD}"
+             {
+              VerticalLayoutWidgetClass "{567A938CD76F4AE7}" {
+               Prefab "{567A938CD76F4AE7}"
+               {
+                GridLayoutWidgetClass "{566EE36D1B833D06}" {
+                 Prefab "{566EE36D1B833D06}"
+                 RowFill {
+                  1 1 1 1
+                 }
+                 ColumnFill {
+                  1 1 1 1 1
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

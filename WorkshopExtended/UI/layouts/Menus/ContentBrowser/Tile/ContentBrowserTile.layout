@@ -1,0 +1,110 @@
+ButtonWidgetClass {
+ {
+  OverlayWidgetClass "{54B287530261D328}" {
+   Prefab "{54B287530261D328}"
+   {
+    VerticalLayoutWidgetClass "{54B287530261D32A}" {
+     Prefab "{54B287530261D32A}"
+     {
+      SizeLayoutWidgetClass "{566EE369E04853CD}" {
+       Prefab "{566EE369E04853CD}"
+       {
+        FrameWidgetClass "{566EE364B91EFC36}" {
+         Prefab "{566EE364B91EFC36}"
+         {
+          FrameWidgetClass "{587EE6EEE03ED4E7}" {
+           Prefab "{587EE6EEE03ED4E7}"
+           Slot FrameWidgetSlot "{587EE6EEE03ED430}" {
+            OffsetRight 48
+           }
+           {
+            FrameWidgetClass "{587EFD1E7A562222}" {
+             Prefab "{587EFD1E7A562222}"
+             {
+              TextWidgetClass "{566F09CA74744642}" {
+               Prefab "{566F09CA74744642}"
+               Slot FrameWidgetSlot "{566F09C65064D63F}" {
+                OffsetLeft 7
+                PositionY -3
+                OffsetTop -3
+                OffsetRight -7
+                OffsetBottom 3
+               }
+               "Font Size" 14
+               "Min Font Size" 14
+              }
+              TextWidgetClass "{54D4C42871EE0A39}" {
+               Prefab "{54D4C42871EE0A39}"
+               "Font Size" 12
+               "Min Font Size" 12
+              }
+             }
+            }
+           }
+          }
+          OverlayWidgetClass "{5704E5A349B8C4DF}" {
+           Prefab "{5704E5A349B8C4DF}"
+           {
+            ButtonWidgetClass "{5704DCE9ED42F131}" {
+             Prefab "{5704DCE9ED42F131}"
+             components {
+              SCR_ModularButtonComponent "{56E6BC0B4BBA0BE8}" {
+               m_aEffects {
+                SCR_ButtonEffectPosition "{56E6BC1546F4E006}" {
+                 m_vToggledOn 7 0 0
+                 m_vToggledOff -7 0 0
+                }
+               }
+              }
+             }
+             {
+              FrameWidgetClass "{56E6E5F526291EC1}" {
+               Prefab "{56E6E5F526291EC1}"
+               {
+                FrameWidgetClass "{56E6DD0E68DFFD3D}" {
+                 Prefab "{56E6DD0E68DFFD3D}"
+                 Slot FrameWidgetSlot "{56E6E5F52621B69F}" {
+                  SizeX 45
+                 }
+                 {
+                  ImageWidgetClass "{56E6DD0D3337C26B}" {
+                   Prefab "{56E6DD0D3337C26B}"
+                   Slot FrameWidgetSlot "{56E6DD0D3337C1BD}" {
+                    OffsetLeft 0
+                    OffsetTop 0
+                    SizeX 36
+                    OffsetRight -36
+                    SizeY 11
+                    OffsetBottom -11
+                   }
+                  }
+                  ImageWidgetClass "{56E6DD0D5961BF30}" {
+                   Prefab "{56E6DD0D5961BF30}"
+                   Slot FrameWidgetSlot "{56E6DD0D5961BF53}" {
+                    OffsetLeft 0
+                    OffsetTop 0
+                    SizeX 23
+                    OffsetRight -23
+                    SizeY 23
+                    OffsetBottom -23
+                   }
+                   Size 48 48
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,13 @@
+MetaFileClass {
+ Name "{FACCFE81F2C2C1FD}UI/layouts/Menus/ContentBrowser/ContentBrorwser_AddonsSubMenu.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}
