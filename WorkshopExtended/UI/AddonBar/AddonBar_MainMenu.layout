@@ -12,7 +12,7 @@ OverlayWidgetClass : "{E51B373A4E72E920}UI/AddonBar/AddonBar.layout" {
  }
  components {
   WEXT_AddonBarComponent "{596A0501BA662AD4}" {
-   m_iMaxIcons 8
+   m_iMaxIcons 7
   }
  }
  {

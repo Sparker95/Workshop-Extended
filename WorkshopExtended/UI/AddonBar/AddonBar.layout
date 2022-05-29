@@ -6,6 +6,7 @@ OverlayWidgetClass {
  }
  components {
   WEXT_AddonBarComponent "{596A0501BA662AD4}" {
+   m_iMaxIcons 13
   }
   SCR_WidgetExportRuleRoot "{596A0B13B586F66F}" : "{98535A58D347558D}UI/WidgetExportRuleRoot.conf" {
   }
@@ -34,10 +35,66 @@ OverlayWidgetClass {
      Color 0.178 0.178 0.178 1
      Size 2 45
     }
+    ButtonWidgetClass "{597B34B6CC021A09}" : "{4A6A000D6004A029}UI/AddonBar/UpdateButton.layout" {
+     Name "m_UpdateButton"
+     Slot LayoutSlot "{5708EA930684ACAB}" {
+      Padding 5 4 5 4
+     }
+     components {
+      SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+       m_aEffects {
+        SCR_ButtonEffectImage "{5708EA928E98671B}" {
+         m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92F1B2F0DA}" {
+          m_ImageName "down"
+         }
+         m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92E650D571}" {
+          m_ImageName "down"
+         }
+        }
+        SCR_ButtonEffectText "{5964DDA4253F818A}" {
+         m_bEnabled 0
+         m_sDefault "Update\nMods"
+        }
+       }
+      }
+     }
+     {
+      SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+       Prefab "{5964DDA49DABBD48}"
+       {
+        OverlayWidgetClass "{5708EA930B28E8E5}" {
+         Prefab "{5708EA930B28E8E5}"
+         {
+          HorizontalLayoutWidgetClass "{5708EA92AC0FE392}" {
+           Prefab "{5708EA92AC0FE392}"
+           {
+            PanelWidgetClass "{597B28FAE2CE6DFF}" {
+             Prefab "{597B28FAE2CE6DFF}"
+             Slot LayoutSlot "{597B28FA0CAE3C87}" {
+              Padding 0 0 6 0
+             }
+             {
+             }
+            }
+            TextWidgetClass "{5708EA929AC8512E}" {
+             Prefab "{5708EA929AC8512E}"
+             Text "Update"\
+             "Mods"
+             Wrap 1
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
     ButtonWidgetClass "{596A0B10A0DC0773}" : "{071EF3176AAB96DC}UI/Buttons/ButtonLine_ImageText.layout" {
      Name "m_PresetsButton"
      Slot LayoutSlot "{5708EA930684ACAB}" {
       VerticalAlign 1
+      Padding 5 4 5 4
      }
      components {
       SCR_ModularButtonComponent "{5708EA9353A288BA}" {

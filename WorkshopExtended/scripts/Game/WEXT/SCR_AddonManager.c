@@ -5,6 +5,7 @@ modded class SCR_AddonManager
 {
 	const string WEXT_GUID = "5708ADF3AD12AC93";
 	protected ref WEXT_Storage m_Storage;
+	protected int m_iAddonsOutdated;
 	
 	ref ScriptInvoker m_OnAddonsEnabledChanged = new ref ScriptInvoker; // () - Called wherever set of enabled addons has changed
 	
@@ -80,6 +81,13 @@ modded class SCR_AddonManager
 	
 	
 	//----------------------------------------------------------------------------------------------------------------------------------------------------
+	int GetCountAddonsOutdated()
+	{
+		return m_iAddonsOutdated;
+	}
+	
+	
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
 	override void EOnInit(IEntity owner)
 	{
 		super.EOnInit(owner);
@@ -90,6 +98,23 @@ modded class SCR_AddonManager
 		}
 	}
 	
+	
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+	override void FinalizeInitAfterAsyncChecks()
+	{
+		super.FinalizeInitAfterAsyncChecks();
+		
+		// Request versions from all downloaded addons
+		auto offlineAddons = GetOfflineAddons();
+		foreach (SCR_WorkshopItem offlineItem : offlineAddons)
+		{
+			offlineItem.LoadDetails();
+		}
+	}
+	
+	
+	//----------------------------------------------------------------------------------------------------------------------------------------------------
+	protected float m_fAddonsOutdatedTimer = 0;
 	protected float m_fAddonsEnabledTimer = 0;
 	protected string m_sAddonsEnabledPrev;
 	override void EOnFrame(IEntity owner, float timeSlice)
@@ -117,6 +142,16 @@ modded class SCR_AddonManager
 			}
 			
 			m_fAddonsEnabledTimer = 0;
+		}
+		
+		
+		// Count and cache amount of outdated addons
+		// This doesn't need to happen often, 1s is enough
+		m_fAddonsOutdatedTimer += timeSlice;
+		if (m_fAddonsOutdatedTimer > 1)
+		{
+			m_iAddonsOutdated = CountItemsBasic(GetOfflineAddons(), EWorkshopItemQuery.UPDATE_AVAILABLE);
+			m_fAddonsOutdatedTimer = 0;
 		}
 	}
 }

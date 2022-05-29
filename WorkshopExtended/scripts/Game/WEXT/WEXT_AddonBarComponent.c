@@ -24,6 +24,9 @@ class WEXT_AddonBarComponent : ScriptedWidgetComponent
 		UpdateAllWidgets();
 		
 		widgets.m_PresetsButtonComponent.m_OnClicked.Insert(Callback_OnPresetsButton);
+		widgets.m_UpdateButtonComponent.m_OnClicked.Insert(Callback_OnUpdateButton);
+		
+		GetGame().GetCallqueue().CallLater(OnUpdate2, 0, true);
 	}
 	
 	override void HandlerDeattached(Widget w)
@@ -32,6 +35,8 @@ class WEXT_AddonBarComponent : ScriptedWidgetComponent
 		
 		if (mgr)
 			SCR_AddonManager.GetInstance().m_OnAddonsEnabledChanged.Remove(Callback_OnAddonsEnabledChanged);
+		
+		GetGame().GetCallqueue().Remove(OnUpdate2);
 	}
 	
 	protected void Callback_OnAddonsEnabledChanged()
@@ -86,6 +91,33 @@ class WEXT_AddonBarComponent : ScriptedWidgetComponent
 	void Callback_OnPresetsButton()
 	{
 		GetGame().GetMenuManager().OpenDialog(ChimeraMenuPreset.AddonPresetDialog);
+	}
+	
+	void Callback_OnUpdateButton()
+	{
+		SCR_AddonManager mgr = SCR_AddonManager.GetInstance();
+		array<ref SCR_WorkshopItem> addonsOutdated = SCR_AddonManager.SelectItemsBasic(mgr.GetOfflineAddons(), EWorkshopItemQuery.UPDATE_AVAILABLE);
+		
+		// Open download confirmation dialog
+		array<ref Tuple2<SCR_WorkshopItem, string>> addonsAndVersions = {};		
+		foreach (SCR_WorkshopItem item : addonsOutdated)
+			addonsAndVersions.Insert(new Tuple2<SCR_WorkshopItem, string>(item, string.Empty));
+		
+		SCR_DownloadConfirmationDialog.CreateForAddons(addonsAndVersions, false);
+	}
+	
+	void OnUpdate2()
+	{
+		SCR_AddonManager mgr = SCR_AddonManager.GetInstance();
+		
+		int nOutdated = mgr.GetCountAddonsOutdated();
+		
+		widgets.m_UpdateButton.SetVisible(nOutdated > 0);
+		
+		if (nOutdated > 0)
+		{
+			widgets.m_OutdatedAddonsCountText.SetText(nOutdated.ToString());
+		}
 	}
 }
 

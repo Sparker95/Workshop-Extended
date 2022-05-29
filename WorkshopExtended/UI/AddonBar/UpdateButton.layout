@@ -1,0 +1,93 @@
+ButtonWidgetClass : "{071EF3176AAB96DC}UI/Buttons/ButtonLine_ImageText.layout" {
+ Name "m_UpdateButton"
+ Slot LayoutSlot "{5708EA930684ACAB}" {
+  VerticalAlign 1
+ }
+ components {
+  SCR_ModularButtonComponent "{5708EA9353A288BA}" {
+   m_aEffects {
+    SCR_ButtonEffectImage "{5708EA928E98671B}" {
+     m_Default SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92F1B2F0DA}" {
+      m_ImageName "download"
+     }
+     m_Hovered SCR_ButtonEffectImage_ImageOrImageSet "{5708EA92E650D571}" {
+      m_ImageName "download"
+     }
+    }
+    SCR_ButtonEffectText "{5964DDA4253F818A}" {
+     m_sDefault "Update"
+    }
+    SCR_ButtonEffectOpacity "{597B28FC07608A57}" {
+     m_eEvents 3
+     m_sWidgetName "Border"
+     m_fHovered 1
+    }
+   }
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{5964DDA49DABBD48}" {
+   Prefab "{5964DDA49DABBD48}"
+   AllowHeightOverride 1
+   HeightOverride 50
+   {
+    OverlayWidgetClass "{5708EA930B28E8E5}" {
+     Prefab "{5708EA930B28E8E5}"
+     {
+      HorizontalLayoutWidgetClass "{5708EA92AC0FE392}" {
+       Prefab "{5708EA92AC0FE392}"
+       {
+        PanelWidgetClass "{597B28FAE2CE6DFF}" {
+         Name "OutdatedAddonsCount"
+         Slot LayoutSlot "{597B28FA0CAE3C87}" {
+          VerticalAlign 1
+          Padding 4 0 4 0
+         }
+         "Z Order" -5
+         {
+          TextWidgetClass "{597B28FAF2567334}" {
+           Name "m_OutdatedAddonsCountText"
+           Slot FrameWidgetSlot "{597B28FA0652205E}" {
+            Anchor 0 0 1 1
+            PositionX 20
+            OffsetLeft 5
+            PositionY 16
+            OffsetTop 5
+            SizeX 0
+            OffsetRight 6
+            SizeY 0
+            OffsetBottom 5
+            SizeToContent 1
+           }
+           Text "999"
+           "Horizontal Alignment" Center
+           "Vertical Alignment" Center
+           FontProperties FontProperties "{597B28FADE8AD0FF}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+         }
+        }
+        ImageWidgetClass "{5708EA929121336C}" {
+         Prefab "{5708EA929121336C}"
+         "Z Order" -10
+         Size 44 44
+        }
+       }
+      }
+      PanelWidgetClass "{597B3AA19EFAFAEC}" {
+       Name "Border"
+       Slot OverlayWidgetSlot "{597B3AA19EFAFAC4}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       "Z Order" 100
+       Color 0.761 0.392 0.078 1
+       style outline_2px
+      }
+     }
+    }
+   }
+  }
+ }
+}

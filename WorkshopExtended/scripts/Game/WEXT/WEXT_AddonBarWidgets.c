@@ -8,6 +8,11 @@ class WEXT_AddonBarWidgets
 
 	HorizontalLayoutWidget m_AddonIconsLayout;
 
+	ButtonWidget m_UpdateButton;
+	SCR_ModularButtonComponent m_UpdateButtonComponent;
+
+	TextWidget m_OutdatedAddonsCountText;
+
 	ButtonWidget m_PresetsButton;
 	SCR_ModularButtonComponent m_PresetsButtonComponent;
 
@@ -16,6 +21,11 @@ class WEXT_AddonBarWidgets
 	bool Init(Widget root)
 	{
 		m_AddonIconsLayout = HorizontalLayoutWidget.Cast(root.FindWidget("HorizontalLayout.m_AddonIconsLayout"));
+
+		m_UpdateButton = ButtonWidget.Cast(root.FindWidget("HorizontalLayout.m_UpdateButton"));
+		m_UpdateButtonComponent = SCR_ModularButtonComponent.Cast(m_UpdateButton.FindHandler(SCR_ModularButtonComponent));
+
+		m_OutdatedAddonsCountText = TextWidget.Cast(root.FindWidget("HorizontalLayout.m_UpdateButton.Size.Overlay.HorizontalLayout.OutdatedAddonsCount.m_OutdatedAddonsCountText"));
 
 		m_PresetsButton = ButtonWidget.Cast(root.FindWidget("HorizontalLayout.m_PresetsButton"));
 		m_PresetsButtonComponent = SCR_ModularButtonComponent.Cast(m_PresetsButton.FindHandler(SCR_ModularButtonComponent));
