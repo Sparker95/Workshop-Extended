@@ -1,5 +1,5 @@
 //! Meta data of one addon
-class WEXT_AddonMeta : JsonApiStruct
+class SCR_WorkshopAddonPresetAddonMeta : JsonApiStruct
 {
 	
 	//----------------------------------------------------------
@@ -22,14 +22,14 @@ class WEXT_AddonMeta : JsonApiStruct
 	
 	
 	
-	WEXT_AddonMeta Copy()
+	SCR_WorkshopAddonPresetAddonMeta Copy()
 	{
-		WEXT_AddonMeta a = (new WEXT_AddonMeta).Init(m_sGuid, m_sName);
+		SCR_WorkshopAddonPresetAddonMeta a = (new SCR_WorkshopAddonPresetAddonMeta).Init(m_sGuid, m_sName);
 		return a;
 	}
 	
 	// We must keep constructor without arguments, otherwise JSON serializer has problems
-	WEXT_AddonMeta Init(string guid, string name)
+	SCR_WorkshopAddonPresetAddonMeta Init(string guid, string name)
 	{
 		m_sGuid = guid;
 		m_sName = name;
@@ -37,7 +37,7 @@ class WEXT_AddonMeta : JsonApiStruct
 		return this;
 	}
 	
-	void WEXT_AddonMeta()
+	void SCR_WorkshopAddonPresetAddonMeta()
 	{
 		RegV("m_sGuid");
 		RegV("m_sName");
@@ -47,10 +47,10 @@ class WEXT_AddonMeta : JsonApiStruct
 
 
 //! Preset of addons
-class WEXT_AddonPreset : JsonApiStruct
+class SCR_WorkshopAddonPreset : JsonApiStruct
 {
 	protected string m_sName;							// Preset name
-	protected ref array<ref WEXT_AddonMeta> m_aAddonsMeta;	// Array with addon GUIDs
+	protected ref array<ref SCR_WorkshopAddonPresetAddonMeta> m_aAddonsMeta;	// Array with addon GUIDs
 	
 	
 	string GetName()
@@ -59,7 +59,7 @@ class WEXT_AddonPreset : JsonApiStruct
 	}
 	
 	// We must keep constructor without arguments, otherwise JSON serializer has problems
-	WEXT_AddonPreset Init(string name, notnull array<ref WEXT_AddonMeta> addons)
+	SCR_WorkshopAddonPreset Init(string name, notnull array<ref SCR_WorkshopAddonPresetAddonMeta> addons)
 	{
 		m_sName = name;
 		m_aAddonsMeta = {};
@@ -70,13 +70,13 @@ class WEXT_AddonPreset : JsonApiStruct
 		return this;
 	}
 	
-	WEXT_AddonPreset Copy()
+	SCR_WorkshopAddonPreset Copy()
 	{
-		WEXT_AddonPreset a = (new WEXT_AddonPreset).Init(m_sName, m_aAddonsMeta);
+		SCR_WorkshopAddonPreset a = (new SCR_WorkshopAddonPreset).Init(m_sName, m_aAddonsMeta);
 		return a;
 	}
 	
-	void WEXT_AddonPreset()
+	void SCR_WorkshopAddonPreset()
 	{
 		RegV("m_sName");
 		RegV("m_aAddonsMeta");
@@ -87,9 +87,9 @@ class WEXT_AddonPreset : JsonApiStruct
 		return m_aAddonsMeta.Count();
 	}
 	
-	array<ref WEXT_AddonMeta> GetAddons()
+	array<ref SCR_WorkshopAddonPresetAddonMeta> GetAddons()
 	{
-		array<ref WEXT_AddonMeta> outArray = {};
+		array<ref SCR_WorkshopAddonPresetAddonMeta> outArray = {};
 		foreach (auto m : m_aAddonsMeta)
 			outArray.Insert(m);
 		
@@ -104,7 +104,7 @@ class WEXT_Storage : JsonApiStruct
 	//----------------------------------------------------------
 	// Serialized variables
 	protected int m_iVersion; // Might be useful for future versioning
-	protected ref array<ref WEXT_AddonPreset> m_aPresets;
+	protected ref array<ref SCR_WorkshopAddonPreset> m_aPresets;
 	//----------------------------------------------------------
 	
 	
@@ -127,11 +127,11 @@ class WEXT_Storage : JsonApiStruct
 	//-----------------------------------------------------------------------------------------
 	// PUBLIC
 	
-	array<ref WEXT_AddonPreset> GetAllPresets()
+	array<ref SCR_WorkshopAddonPreset> GetAllPresets()
 	{
-		array<ref WEXT_AddonPreset> arrayOut = {};
+		array<ref SCR_WorkshopAddonPreset> arrayOut = {};
 
-		foreach (WEXT_AddonPreset preset : m_aPresets)
+		foreach (SCR_WorkshopAddonPreset preset : m_aPresets)
 		{
 			arrayOut.Insert(preset);
 		}
@@ -140,7 +140,7 @@ class WEXT_Storage : JsonApiStruct
 	}
 	
 	
-	void SavePreset(notnull WEXT_AddonPreset preset)
+	void SavePreset(notnull SCR_WorkshopAddonPreset preset)
 	{
 		string name = preset.GetName();
 		
@@ -149,7 +149,7 @@ class WEXT_Storage : JsonApiStruct
 		// Make a copy of provided data,
 		// either append it to array or replace prev. preset with same name
 		
-		WEXT_AddonPreset presetCopy = preset.Copy();
+		SCR_WorkshopAddonPreset presetCopy = preset.Copy();
 		
 		if (id != -1)
 			m_aPresets[id] = presetCopy;
@@ -208,7 +208,7 @@ class WEXT_Storage : JsonApiStruct
 		return true;
 	}
 	
-	WEXT_AddonPreset GetPreset(string name)
+	SCR_WorkshopAddonPreset GetPreset(string name)
 	{
 		int id = GetPresetId(name);
 		
@@ -234,7 +234,7 @@ class WEXT_Storage : JsonApiStruct
 	
 	protected int GetPresetId(string name)
 	{
-		foreach (int i, WEXT_AddonPreset preset : m_aPresets)
+		foreach (int i, SCR_WorkshopAddonPreset preset : m_aPresets)
 		{
 			if (preset.GetName() == name)
 				return i;

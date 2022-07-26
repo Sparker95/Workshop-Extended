@@ -1,8 +1,8 @@
-class WEXT_ToolsDialog : SCR_ConfigurableDialogUi
+class SCR_WorkshopToolsDialog : SCR_ConfigurableDialogUi
 {
-	protected ref WEXT_ConfigurableDialog_ToolsWidgets widgets = new WEXT_ConfigurableDialog_ToolsWidgets();
+	protected ref SCR_WorkshopConfigurableDialog_ToolsWidgets widgets = new SCR_WorkshopConfigurableDialog_ToolsWidgets();
 	
-	void WEXT_ToolsDialog()
+	void SCR_WorkshopToolsDialog()
 	{
 		SCR_ConfigurableDialogUi.CreateFromPreset(WEXT_Dialogs.DIALOGS_CONFIG, "tools", this);
 	}
@@ -40,7 +40,7 @@ class WEXT_ToolsDialog : SCR_ConfigurableDialogUi
 				s = s + ",\n" + GenerateAddonJson(enabledAddons[i]);
 		}
 		
-		new WEXT_DialogCopyToClipboard(s);
+		new SCR_WorkshopDialogCopyToClipboard(s);
 	}
 	
 	
@@ -86,12 +86,12 @@ class WEXT_ToolsDialog : SCR_ConfigurableDialogUi
 				cli = cli + "," + enabledAddons[i].GetId();
 		}
 		
-		new WEXT_DialogCopyToClipboard(cli);
+		new SCR_WorkshopDialogCopyToClipboard(cli);
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	protected void OnGitHubButton()
 	{
-		new WEXT_DialogCopyToClipboard("https://github.com/Sparker95/Workshop-Extended");
+		new SCR_WorkshopDialogCopyToClipboard("https://github.com/Sparker95/Workshop-Extended");
 	}
 }

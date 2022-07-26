@@ -27,7 +27,7 @@ modded class SCR_AddonManager
 	
 	//----------------------------------------------------------------------------------------------------------------------------------------------------
 	// Enables addons from preset, disables all addons from other presets
-	void SelectPreset(WEXT_AddonPreset preset, notnull array<ref WEXT_AddonMeta> addonsNotFound)
+	void SelectPreset(SCR_WorkshopAddonPreset preset, notnull array<ref SCR_WorkshopAddonPresetAddonMeta> addonsNotFound)
 	{	
 		// Disable all addons except for ourselves :)
 		foreach (SCR_WorkshopItem i : GetOfflineAddons())
@@ -39,8 +39,8 @@ modded class SCR_AddonManager
 		}
 		
 		
-		array<ref WEXT_AddonMeta> enabledAddons = preset.GetAddons();
-		foreach (WEXT_AddonMeta meta : enabledAddons)
+		array<ref SCR_WorkshopAddonPresetAddonMeta> enabledAddons = preset.GetAddons();
+		foreach (SCR_WorkshopAddonPresetAddonMeta meta : enabledAddons)
 		{
 			string guid = meta.GetGuid();
 			SCR_WorkshopItem item = GetItem(guid);
@@ -55,26 +55,26 @@ modded class SCR_AddonManager
 	
 	
 	//----------------------------------------------------------------------------------------------------------------------------------------------------
-	WEXT_AddonPreset CreatePresetFromEnabledAddons(string presetName)
+	SCR_WorkshopAddonPreset CreatePresetFromEnabledAddons(string presetName)
 	{		
 		// Get GUIDs of addons which are enabled
 		
 		array<ref SCR_WorkshopItem> enabledAddons = SCR_AddonManager.SelectItemsBasic(GetOfflineAddons(), EWorkshopItemQuery.ENABLED);
 		
-		array<ref WEXT_AddonMeta> addonsMeta = {};
+		array<ref SCR_WorkshopAddonPresetAddonMeta> addonsMeta = {};
 		foreach (SCR_WorkshopItem item : enabledAddons)
 		{
 			string guid = item.GetId();
 			if (guid == WEXT_GUID) // Ignore ourselves
 				continue;
 			
-			addonsMeta.Insert((new WEXT_AddonMeta()).Init(guid, item.GetName()) );
+			addonsMeta.Insert((new SCR_WorkshopAddonPresetAddonMeta()).Init(guid, item.GetName()) );
 		}
 		
 		if (addonsMeta.IsEmpty())
 			return null;
 		
-		WEXT_AddonPreset preset = (new WEXT_AddonPreset()).Init(presetName, addonsMeta);
+		SCR_WorkshopAddonPreset preset = (new SCR_WorkshopAddonPreset()).Init(presetName, addonsMeta);
 		
 		return preset;
 	}

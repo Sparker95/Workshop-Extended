@@ -3,9 +3,9 @@ Component to be attached to addon lines.
 */
 
 //----------------------------------------------------------------------------------------------
-class WEXT_AddonLineComponent : ScriptedWidgetComponent
+class SCR_WorkshopAddonLineComponent : ScriptedWidgetComponent
 {
-	protected ref WEXT_AddonLineWidgets widgets = new WEXT_AddonLineWidgets();
+	protected ref SCR_WorkshopAddonLineWidgets widgets = new SCR_WorkshopAddonLineWidgets();
 	protected Widget m_wRoot;	
 	protected ref SCR_WorkshopItem m_Item;
 	protected bool m_bMouseOver;

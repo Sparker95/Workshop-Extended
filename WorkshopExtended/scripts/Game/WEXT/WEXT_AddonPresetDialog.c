@@ -16,9 +16,9 @@ class WEXT_ListItemData
 }
 
 // We could inherit from MenuBase, but DialogUI implements some basic functionality, like Back button.
-class WEXT_AddonPresetDialog : DialogUI
+class SCR_WorkshopAddonPresetDialog : DialogUI
 {
-	protected ref WEXT_AddonPresetDialogWidgets widgets = new WEXT_AddonPresetDialogWidgets();
+	protected ref SCR_WorkshopAddonPresetDialogWidgets widgets = new SCR_WorkshopAddonPresetDialogWidgets();
 	
 	protected const string STR_ERROR_NAME_INVALID = "Preset name is invalid!";
 	protected const string STR_ERROR_NO_ENABLED_ADDONS = "You have not enabled any mods!";
@@ -52,23 +52,23 @@ class WEXT_AddonPresetDialog : DialogUI
 		// Bail if name empty
 		if (presetName.IsEmpty())
 		{
-			new WEXT_ErrorDialog(STR_ERROR_NAME_INVALID);
+			new SCR_WorkshopErrorDialog(STR_ERROR_NAME_INVALID);
 			return;
 		}
 		
-		WEXT_AddonPreset preset = SCR_AddonManager.GetInstance().CreatePresetFromEnabledAddons(presetName);
+		SCR_WorkshopAddonPreset preset = SCR_AddonManager.GetInstance().CreatePresetFromEnabledAddons(presetName);
 		
 		// Bail if there is nothing enabled
 		if (!preset)
 		{
-			new WEXT_ErrorDialog(STR_ERROR_NO_ENABLED_ADDONS);
+			new SCR_WorkshopErrorDialog(STR_ERROR_NO_ENABLED_ADDONS);
 			return;
 		}
 		
 		// Check if preset with same name is not unique
 		if (storage.PresetExists(presetName))
 		{
-			WEXT_PresetConfirmDialog dlg = WEXT_PresetConfirmDialog.CreateOverridePresetDialog(preset);
+			SCR_WorkshopPresetConfirmDialog dlg = SCR_WorkshopPresetConfirmDialog.CreateOverridePresetDialog(preset);
 			dlg.m_OnConfirm.Insert(Callback_OnConfirmOverride);
 			return;
 		}
@@ -87,17 +87,17 @@ class WEXT_AddonPresetDialog : DialogUI
 		
 		string selectedName = LB_GetItemName(selectedId);
 		
-		WEXT_AddonPreset preset = SCR_AddonManager.GetInstance().CreatePresetFromEnabledAddons(selectedName);
+		SCR_WorkshopAddonPreset preset = SCR_AddonManager.GetInstance().CreatePresetFromEnabledAddons(selectedName);
 		
 		// Bail if there is nothing enabled
 		if (!preset)
 		{
-			new WEXT_ErrorDialog(STR_ERROR_NO_ENABLED_ADDONS);
+			new SCR_WorkshopErrorDialog(STR_ERROR_NO_ENABLED_ADDONS);
 			return;
 		}
 		
 		// Create confirmation dialog
-		WEXT_PresetConfirmDialog dlg = WEXT_PresetConfirmDialog.CreateOverridePresetDialog(preset);
+		SCR_WorkshopPresetConfirmDialog dlg = SCR_WorkshopPresetConfirmDialog.CreateOverridePresetDialog(preset);
 		dlg.m_OnConfirm.Insert(Callback_OnConfirmOverride);
 	}
 	
@@ -110,7 +110,7 @@ class WEXT_AddonPresetDialog : DialogUI
 		
 		string selectedName = LB_GetItemName(selectedId);
 		
-		WEXT_PresetConfirmDialog dlg = WEXT_PresetConfirmDialog.CreateDeletePresetDialog(selectedName);
+		SCR_WorkshopPresetConfirmDialog dlg = SCR_WorkshopPresetConfirmDialog.CreateDeletePresetDialog(selectedName);
 		dlg.m_OnConfirm.Insert(Callback_OnConfirmDelete)
 	}
 	
@@ -124,18 +124,18 @@ class WEXT_AddonPresetDialog : DialogUI
 		string selectedName = LB_GetItemName(selectedId);
 		
 		WEXT_Storage storage = SCR_AddonManager.GetInstance().GetPresetStorage();
-		WEXT_AddonPreset preset = storage.GetPreset(selectedName);
+		SCR_WorkshopAddonPreset preset = storage.GetPreset(selectedName);
 		
 		if (!preset)
 			return;
 		
-		array<ref WEXT_AddonMeta> addonsNotFound = {};
+		array<ref SCR_WorkshopAddonPresetAddonMeta> addonsNotFound = {};
 		SCR_AddonManager.GetInstance().SelectPreset(preset, addonsNotFound);
 		
 		// Show error dialog if we didn't find all addons
 		if (!addonsNotFound.IsEmpty())
 		{
-			new WEXT_ErrorPresetLoadDialog(addonsNotFound);
+			new SCR_WorkshopErrorPresetLoadDialog(addonsNotFound);
 		}
 	}
 	
@@ -155,7 +155,7 @@ class WEXT_AddonPresetDialog : DialogUI
 	//----------------------------------------------------------------------------------------------
 	// CALLBACKS
 	
-	protected void Callback_OnConfirmOverride(WEXT_PresetConfirmDialog dlg)
+	protected void Callback_OnConfirmOverride(SCR_WorkshopPresetConfirmDialog dlg)
 	{
 		int id = LB_FindItemByName(dlg.m_Preset.GetName());
 		
@@ -169,7 +169,7 @@ class WEXT_AddonPresetDialog : DialogUI
 	}
 	
 	
-	protected void Callback_OnConfirmDelete(WEXT_PresetConfirmDialog dlg)
+	protected void Callback_OnConfirmDelete(SCR_WorkshopPresetConfirmDialog dlg)
 	{
 		SCR_AddonManager.GetInstance().GetPresetStorage().DeletePreset(dlg.m_sPresetName);
 		
@@ -187,17 +187,17 @@ class WEXT_AddonPresetDialog : DialogUI
 			lb.RemoveItem(0);
 		
 		WEXT_Storage presetStorage = SCR_AddonManager.GetInstance().GetPresetStorage();
-		array<ref WEXT_AddonPreset> presets = presetStorage.GetAllPresets();
+		array<ref SCR_WorkshopAddonPreset> presets = presetStorage.GetAllPresets();
 		
 		//for (int icopy = 0; icopy < 4; icopy++) // For testing of list box with more items
-		foreach (WEXT_AddonPreset preset : presets)
+		foreach (SCR_WorkshopAddonPreset preset : presets)
 		{
 			WEXT_ListItemData data = new WEXT_ListItemData(preset.GetName());
 			lb.AddItem(GetPresetDisplayName(preset), data);
 		}
 	}
 	
-	protected string GetPresetDisplayName(notnull WEXT_AddonPreset preset)
+	protected string GetPresetDisplayName(notnull SCR_WorkshopAddonPreset preset)
 	{
 		int count  = preset.GetAddonCount();
 		string strMods;

@@ -5,7 +5,7 @@ OverlayWidgetClass {
   VerticalAlign 3
  }
  components {
-  WEXT_AddonBarComponent "{596A0501BA662AD4}" {
+  SCR_WorkshopAddonBarComponent "{596A0501BA662AD4}" {
    m_iMaxIcons 13
   }
   SCR_WidgetExportRuleRoot "{596A0B13B586F66F}" : "{98535A58D347558D}UI/WidgetExportRuleRoot.conf" {

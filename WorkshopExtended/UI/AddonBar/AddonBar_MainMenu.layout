@@ -11,7 +11,7 @@ OverlayWidgetClass : "{E51B373A4E72E920}UI/AddonBar/AddonBar.layout" {
   OffsetBottom 0
  }
  components {
-  WEXT_AddonBarComponent "{596A0501BA662AD4}" {
+  SCR_WorkshopAddonBarComponent "{596A0501BA662AD4}" {
    m_iMaxIcons 7
   }
  }

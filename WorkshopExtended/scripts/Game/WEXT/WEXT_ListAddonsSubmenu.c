@@ -1,6 +1,6 @@
-class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
+class SCR_WorkshopListAddonsSubmenu : SCR_SubMenuBase
 {
-	protected ref WEXT_ListAddonsSubMenuWidgets widgets = new WEXT_ListAddonsSubMenuWidgets();
+	protected ref SCR_WorkshopListAddonsSubMenuWidgets widgets = new SCR_WorkshopListAddonsSubMenuWidgets();
 	
 	
 	//------------------------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
 				continue;
 			
 			Widget w = GetGame().GetWorkspace().CreateWidgets("{1E9609F84FF1BF73}UI/WEXT_AddonLine.layout", vLayout);
-			WEXT_AddonLineComponent comp = WEXT_AddonLineComponent.Cast(w.FindHandler(WEXT_AddonLineComponent));
+			SCR_WorkshopAddonLineComponent comp = SCR_WorkshopAddonLineComponent.Cast(w.FindHandler(SCR_WorkshopAddonLineComponent));
 			comp.Init(item);
 			comp.m_OnEnableButton.Insert(OnEnableButton);
 			comp.m_OnDisableButton.Insert(OnDisableButton);
@@ -108,7 +108,7 @@ class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
 	
 	
 	//------------------------------------------------------------------------------------------------
-	protected void OnLineMouseEnter(WEXT_AddonLineComponent comp)
+	protected void OnLineMouseEnter(SCR_WorkshopAddonLineComponent comp)
 	{
 		auto item = comp.GetWorkshopItem();
 		widgets.m_AddonInfoPanelComponent.SetWorkshopItem(item);
@@ -116,7 +116,7 @@ class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
 	
 	
 	//------------------------------------------------------------------------------------------------
-	protected void OnLineMouseLeave(WEXT_AddonLineComponent comp)
+	protected void OnLineMouseLeave(SCR_WorkshopAddonLineComponent comp)
 	{
 		// Since this event is handled not natively, but it scripted, it is buggy, so 
 		// OnMouseLeave can be called before OnMouseEnter. So we don't erase data from info
@@ -134,7 +134,7 @@ class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
 	
 	
 	//------------------------------------------------------------------------------------------------
-	protected void OnEnableButton(WEXT_AddonLineComponent comp)
+	protected void OnEnableButton(SCR_WorkshopAddonLineComponent comp)
 	{
 		SCR_WorkshopItem item = comp.GetWorkshopItem();
 		item.SetEnabled(true);
@@ -143,7 +143,7 @@ class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
 	
 	
 	//------------------------------------------------------------------------------------------------
-	protected void OnDisableButton(WEXT_AddonLineComponent comp)
+	protected void OnDisableButton(SCR_WorkshopAddonLineComponent comp)
 	{
 		SCR_WorkshopItem item = comp.GetWorkshopItem();
 		item.SetEnabled(false);
@@ -152,7 +152,7 @@ class WEXT_ListAddonsSubmenu : SCR_SubMenuBase
 	
 	protected void OnToolsButton()
 	{
-		new WEXT_ToolsDialog();
+		new SCR_WorkshopToolsDialog();
 	}
 	
 	

@@ -10,7 +10,7 @@ ButtonWidgetClass {
   SCR_HoverDetectorComponent "{596A0B18C0F5225F}" {
    m_fHoverDelayMs 50
   }
-  WEXT_AddonBarIconComponent "{596A0542D05554FC}" {
+  SCR_WorkshopAddonBarIconComponent "{596A0542D05554FC}" {
   }
   SCR_ModularButtonComponent "{596A0B1C27C690A5}" {
    m_aEffects {

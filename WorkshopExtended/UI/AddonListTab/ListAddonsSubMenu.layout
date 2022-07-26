@@ -9,7 +9,7 @@ OverlayWidgetClass {
    ScriptAddon "$WorkshopExtended:"
    ScriptClassNamePrefix "WEXT_"
   }
-  WEXT_ListAddonsSubmenu "{5964F3A47A51C97D}" {
+  SCR_WorkshopListAddonsSubmenu "{5964F3A47A51C97D}" {
   }
  }
  {

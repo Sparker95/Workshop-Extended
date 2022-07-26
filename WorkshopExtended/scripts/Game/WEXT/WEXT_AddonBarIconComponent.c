@@ -1,6 +1,6 @@
-class WEXT_AddonBarIconComponent : ScriptedWidgetComponent
+class SCR_WorkshopAddonBarIconComponent : ScriptedWidgetComponent
 {
-	protected ref WEXT_AddonBarIconWidgets widgets = new WEXT_AddonBarIconWidgets();
+	protected ref SCR_WorkshopAddonBarIconWidgets widgets = new SCR_WorkshopAddonBarIconWidgets();
 	
 	protected SCR_HoverDetectorComponent m_HoverDetector;
 	

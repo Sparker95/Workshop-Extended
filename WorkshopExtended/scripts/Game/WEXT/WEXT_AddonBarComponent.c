@@ -1,11 +1,11 @@
-class WEXT_AddonBarComponent : ScriptedWidgetComponent
+class SCR_WorkshopAddonBarComponent : ScriptedWidgetComponent
 {
 	protected const ResourceName ADSDON_BAR_ICON_LAYOUT = "{9B80BD4A534C651C}UI/AddonBarIcon.layout";
 	
 	static const ResourceName LAYOUT_BASE = "{E51B373A4E72E920}UI/AddonBar.layout";
 	static const ResourceName LAYOUT_MAIN_MENU = "{44F366DD5417EC0D}UI/AddonBar_MainMenu.layout";
 	
-	protected ref WEXT_AddonBarWidgets widgets = new WEXT_AddonBarWidgets();
+	protected ref SCR_WorkshopAddonBarWidgets widgets = new SCR_WorkshopAddonBarWidgets();
 	
 	[Attribute("14", UIWidgets.EditBox)]
 	protected int m_iMaxIcons;
@@ -69,7 +69,7 @@ class WEXT_AddonBarComponent : ScriptedWidgetComponent
 			
 			Widget w = GetGame().GetWorkspace().CreateWidgets(ADSDON_BAR_ICON_LAYOUT, widgets.m_AddonIconsLayout);
 			
-			WEXT_AddonBarIconComponent comp = WEXT_AddonBarIconComponent.Cast(w.FindHandler(WEXT_AddonBarIconComponent));
+			SCR_WorkshopAddonBarIconComponent comp = SCR_WorkshopAddonBarIconComponent.Cast(w.FindHandler(SCR_WorkshopAddonBarIconComponent));
 			comp.SetWorkshopItem(item);
 			
 			nAddonsEnabled++;
@@ -139,7 +139,7 @@ modded class ContentBrowserUI
 	{
 		super.OnMenuOpen();
 		Widget tgtWidget = GetRootWidget().FindWidget(INJECT_PATH_WORKSHOP_MENU);
-		GetGame().GetWorkspace().CreateWidgets(WEXT_AddonBarComponent.LAYOUT_BASE, tgtWidget);
+		GetGame().GetWorkspace().CreateWidgets(SCR_WorkshopAddonBarComponent.LAYOUT_BASE, tgtWidget);
 	}
 }
 
@@ -151,7 +151,7 @@ modded class ContentBrowserDetailsMenu
 	{
 		super.OnMenuOpen();
 		Widget tgtWidget = GetRootWidget().FindWidget(INJECT_PATH_WORKSHOP_DETAILS_MENU);
-		GetGame().GetWorkspace().CreateWidgets(WEXT_AddonBarComponent.LAYOUT_BASE, tgtWidget);
+		GetGame().GetWorkspace().CreateWidgets(SCR_WorkshopAddonBarComponent.LAYOUT_BASE, tgtWidget);
 	}
 	
 	override void Init(SCR_WorkshopItem item)
@@ -168,7 +168,7 @@ modded class SCR_ScenarioMenu
 	{
 		super.OnMenuOpen();
 		Widget tgtWidget = GetRootWidget().FindWidget(INJECT_PATH_SCENARIO_MENU);
-		GetGame().GetWorkspace().CreateWidgets(WEXT_AddonBarComponent.LAYOUT_BASE, tgtWidget);
+		GetGame().GetWorkspace().CreateWidgets(SCR_WorkshopAddonBarComponent.LAYOUT_BASE, tgtWidget);
 	}
 }
 
@@ -180,7 +180,7 @@ modded class PlayMenuUI
 	{
 		super.OnMenuOpen();
 		Widget tgtWidget = GetRootWidget().FindWidget(INJECT_PATH_PLAY_MENU);
-		GetGame().GetWorkspace().CreateWidgets(WEXT_AddonBarComponent.LAYOUT_BASE, tgtWidget);
+		GetGame().GetWorkspace().CreateWidgets(SCR_WorkshopAddonBarComponent.LAYOUT_BASE, tgtWidget);
 	}
 }
 
@@ -192,6 +192,6 @@ modded class MainMenuUI
 	{
 		super.OnMenuOpen();
 		Widget tgtWidget = GetRootWidget().FindWidget(INJECT_PATH_MAIN_MENU);
-		GetGame().GetWorkspace().CreateWidgets(WEXT_AddonBarComponent.LAYOUT_MAIN_MENU, tgtWidget);
+		GetGame().GetWorkspace().CreateWidgets(SCR_WorkshopAddonBarComponent.LAYOUT_MAIN_MENU, tgtWidget);
 	}
 }
