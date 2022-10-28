@@ -1,5 +1,7 @@
 # Workshop Extended
 
+## This mod has been merged to Reforger and is now the Mod Manager since version 0.9.6. This mod alone makes no sense any more.
+
 This mod for Arma Reforger extends in-game Workshop UI and adds new features:
 - List view with mods. You can easily enable/disable or delete mods.
 - Mod presets.
